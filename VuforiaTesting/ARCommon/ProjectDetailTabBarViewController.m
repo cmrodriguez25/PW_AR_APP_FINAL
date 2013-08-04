@@ -7,7 +7,6 @@
 //
 
 #import "ProjectDetailTabBarViewController.h"
-#import <UIKit/UITabBar.h>
 
 @implementation ProjectDetailTabBarViewController
 
@@ -26,7 +25,7 @@
     [super viewDidLoad];
     [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
     [[UITabBar appearance] setBarTintColor:[UIColor clearColor]];
-    [[UITabBar appearance] setOpaque:NO];
+    //[[UITabBar appearance] setOpaque:NO];
     
 	// Do any additional setup after loading the view.
 

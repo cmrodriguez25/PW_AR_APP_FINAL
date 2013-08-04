@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123BEEB117ADA507007393CA /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 130D896617ABE2D2005F9F63 /* libQCAR.a */; };
+		123BEEB217ADA924007393CA /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
+		123BEEB517ADAD8B007393CA /* ProjectDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */; };
 		128A9D6C17A8084F00B1298B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6B17A8084F00B1298B /* Foundation.framework */; };
 		128A9D6E17A8084F00B1298B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6D17A8084F00B1298B /* CoreGraphics.framework */; };
 		128A9D7017A8084F00B1298B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6F17A8084F00B1298B /* UIKit.framework */; };
@@ -46,7 +49,6 @@
 		130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */ = {isa = PBXBuildFile; fileRef = 130D898317ABE2D2005F9F63 /* TextureTeapotBrass.png */; };
 		130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 130D898417ABE2D2005F9F63 /* TextureTeapotRed.png */; };
 		130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130D898817ABE2D2005F9F63 /* VuforiaTesting-Info.plist */; };
-		13B8404417AC557800174CED /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 130D896617ABE2D2005F9F63 /* libQCAR.a */; };
 		13B8404517AC561E00174CED /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A9DF117A96F8000B1298B /* OverlayView.m */; };
 		13B8404617AC561E00174CED /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 128A9DF517A96F8000B1298B /* QCARutils.mm */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		123BEEB317ADAD8B007393CA /* ProjectDetailTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectDetailTabBarViewController.h; path = ../ARCommon/ProjectDetailTabBarViewController.h; sourceTree = "<group>"; };
+		123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectDetailTabBarViewController.m; path = ../ARCommon/ProjectDetailTabBarViewController.m; sourceTree = "<group>"; };
 		125D302A17AC175F00AC67CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		125D302C17AC175F00AC67CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/ProjectDetail.storyboard; sourceTree = "<group>"; };
 		128A9D6817A8084F00B1298B /* VuforiaTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VuforiaTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,7 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B8404417AC557800174CED /* libQCAR.a in Frameworks */,
+				123BEEB117ADA507007393CA /* libQCAR.a in Frameworks */,
 				128A9DD817A85D2D00B1298B /* SystemConfiguration.framework in Frameworks */,
 				128A9D6E17A8084F00B1298B /* CoreGraphics.framework in Frameworks */,
 				128A9DD617A85D1300B1298B /* CoreMotion.framework in Frameworks */,
@@ -355,6 +359,8 @@
 		130D896717ABE2D2005F9F63 /* VuforiaTesting */ = {
 			isa = PBXGroup;
 			children = (
+				123BEEB317ADAD8B007393CA /* ProjectDetailTabBarViewController.h */,
+				123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */,
 				130D896817ABE2D2005F9F63 /* AppDelegate.h */,
 				130D896917ABE2D2005F9F63 /* AppDelegate.m */,
 				130D896A17ABE2D2005F9F63 /* ARTargetFoundDelegate.h */,
@@ -494,6 +500,7 @@
 				130D89A017ABE2D2005F9F63 /* InfoPlist.strings in Resources */,
 				130D89A217ABE2D2005F9F63 /* Images.xcassets in Resources */,
 				130D89A717ABE2D2005F9F63 /* about.html in Resources */,
+				123BEEB217ADA924007393CA /* ProjectDetail.storyboard in Resources */,
 				130D89AB17ABE2D2005F9F63 /* Tarmac.xml in Resources */,
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
 				130D89A917ABE2D2005F9F63 /* StonesAndChips.xml in Resources */,
@@ -519,6 +526,7 @@
 			files = (
 				13B8404517AC561E00174CED /* OverlayView.m in Sources */,
 				13B8404617AC561E00174CED /* QCARutils.mm in Sources */,
+				123BEEB517ADAD8B007393CA /* ProjectDetailTabBarViewController.m in Sources */,
 				130D899D17ABE2D2005F9F63 /* AppDelegate.m in Sources */,
 				130D89A417ABE2D2005F9F63 /* MainMenuViewController.m in Sources */,
 				12AAF23D17A98336008E3372 /* Texture2D.m in Sources */,
@@ -665,6 +673,7 @@
 					"$(inherited)",
 					/Users/michell/Desktop/Test/trunk/VuforiaTesting,
 					"/Users/cynthiabesada/Documents/Perkins+Will/PW_AR_APP_FINAL/PW_AR_APP_FINAL/VuforiaTesting",
+					/Users/michell/Desktop/PW_AR_APP_FINAL/VuforiaTesting,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -687,6 +696,7 @@
 					"$(inherited)",
 					/Users/michell/Desktop/Test/trunk/VuforiaTesting,
 					"/Users/cynthiabesada/Documents/Perkins+Will/PW_AR_APP_FINAL/PW_AR_APP_FINAL/VuforiaTesting",
+					/Users/michell/Desktop/PW_AR_APP_FINAL/VuforiaTesting,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

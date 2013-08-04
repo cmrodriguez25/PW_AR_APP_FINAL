@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UITabBar.h>
 
-@interface ProjectDetailTabBarViewController : UIViewController <UITabBarDelegate>
-
+@interface ProjectDetailTabBarViewController : UITabBarController
 @end
