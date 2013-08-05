@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120F445C17AEF78B002319D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302917AC175F00AC67CB /* Main.storyboard */; };
+		120F445D17AEF78B002319D1 /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
 		123BEEB117ADA507007393CA /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 130D896617ABE2D2005F9F63 /* libQCAR.a */; };
-		123BEEB217ADA924007393CA /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
 		123BEEB517ADAD8B007393CA /* ProjectDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */; };
+		126F445B17AEE9BB00A37554 /* Project1.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F445917AEE4DD00A37554 /* Project1.png */; };
+		126F445D17AEEFB700A37554 /* Map1.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F445C17AEEFA700A37554 /* Map1.png */; };
 		128A9D6C17A8084F00B1298B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6B17A8084F00B1298B /* Foundation.framework */; };
 		128A9D6E17A8084F00B1298B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6D17A8084F00B1298B /* CoreGraphics.framework */; };
 		128A9D7017A8084F00B1298B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6F17A8084F00B1298B /* UIKit.framework */; };
@@ -68,6 +71,8 @@
 		123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectDetailTabBarViewController.m; path = ../ARCommon/ProjectDetailTabBarViewController.m; sourceTree = "<group>"; };
 		125D302A17AC175F00AC67CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		125D302C17AC175F00AC67CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/ProjectDetail.storyboard; sourceTree = "<group>"; };
+		126F445917AEE4DD00A37554 /* Project1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Project1.png; sourceTree = "<group>"; };
+		126F445C17AEEFA700A37554 /* Map1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map1.png; sourceTree = "<group>"; };
 		128A9D6817A8084F00B1298B /* VuforiaTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VuforiaTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128A9D6B17A8084F00B1298B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		128A9D6D17A8084F00B1298B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -398,6 +403,8 @@
 		130D897C17ABE2D2005F9F63 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				126F445917AEE4DD00A37554 /* Project1.png */,
+				126F445C17AEEFA700A37554 /* Map1.png */,
 				130D897D17ABE2D2005F9F63 /* about.html */,
 				130D897E17ABE2D2005F9F63 /* StonesAndChips.dat */,
 				130D897F17ABE2D2005F9F63 /* StonesAndChips.xml */,
@@ -495,12 +502,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120F445C17AEF78B002319D1 /* Main.storyboard in Resources */,
+				120F445D17AEF78B002319D1 /* ProjectDetail.storyboard in Resources */,
+				126F445D17AEEFB700A37554 /* Map1.png in Resources */,
 				130D89AA17ABE2D2005F9F63 /* Tarmac.dat in Resources */,
+				126F445B17AEE9BB00A37554 /* Project1.png in Resources */,
 				130D89AC17ABE2D2005F9F63 /* TextureTeapotBlue.png in Resources */,
 				130D89A017ABE2D2005F9F63 /* InfoPlist.strings in Resources */,
 				130D89A217ABE2D2005F9F63 /* Images.xcassets in Resources */,
 				130D89A717ABE2D2005F9F63 /* about.html in Resources */,
-				123BEEB217ADA924007393CA /* ProjectDetail.storyboard in Resources */,
 				130D89AB17ABE2D2005F9F63 /* Tarmac.xml in Resources */,
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
 				130D89A917ABE2D2005F9F63 /* StonesAndChips.xml in Resources */,
