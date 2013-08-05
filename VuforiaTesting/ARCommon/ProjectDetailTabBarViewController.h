@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UITabBar.h>
 
-@interface ProjectDetailTabBarViewController : UITabBarController
+@interface ProjectDetailTabBarViewController : UITabBarController {
+    @private
+    NSString *_projectName;
+}
+
+-(void)prepareProjectDetail: (NSString *)projectName;
+
 @end

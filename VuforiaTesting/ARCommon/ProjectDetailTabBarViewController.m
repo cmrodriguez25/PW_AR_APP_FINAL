@@ -8,8 +8,14 @@
 
 #import "ProjectDetailTabBarViewController.h"
 
+
+
 @implementation ProjectDetailTabBarViewController
 
+-(void)prepareProjectDetail:(NSString *)projectName
+{
+    _projectName = projectName;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,10 +29,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // DELETE: This is for testing purposes only.
+    // prepareProjectDetail should be called by MainMenuViewController
+    // with the project name once the user selects the correct project.
+    [self prepareProjectDetail:@"Project 1"];
+    
+    
     [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
     [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
     
-    //self.tabBar.barStyle = UIBarStyleBlackTranslucent;
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.translucent = YES;
     //[[UITabBar appearance] setOpaque:NO];
