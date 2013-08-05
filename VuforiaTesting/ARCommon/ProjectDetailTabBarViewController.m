@@ -24,11 +24,20 @@
 {
     [super viewDidLoad];
     [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
-    [[UITabBar appearance] setBarTintColor:[UIColor clearColor]];
+    [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+    
+    //self.tabBar.barStyle = UIBarStyleBlackTranslucent;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.translucent = YES;
     //[[UITabBar appearance] setOpaque:NO];
     
 	// Do any additional setup after loading the view.
 
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning
