@@ -16,12 +16,21 @@
                         <sections>
                             <tableViewSection id="fAP-gf-chx">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pXg-Mj-n0a">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="pXg-Mj-n0a">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pXg-Mj-n0a" id="gc6-yW-BSY">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Project 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHY-RN-IXw">
+                                                    <rect key="frame" x="20" y="39" width="69" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" label=""/>
                                         <attributedString key="userComments">
@@ -36,13 +45,25 @@
                                             <segue destination="med-0r-nVI" kind="push" id="WGu-Vr-SEX"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WXx-j9-H8h">
-                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="WXx-j9-H8h">
+                                        <rect key="frame" x="0.0" y="164" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WXx-j9-H8h" id="gEv-0E-1ks">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Project 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyj-7I-l73">
+                                                    <rect key="frame" x="20" y="39" width="69" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="med-0r-nVI" kind="push" id="v8n-pS-4ft"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -52,7 +73,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCh-TN-3PW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-799" y="-181"/>
+            <point key="canvasLocation" x="-835" y="-323"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IHz-Bi-rgb">
@@ -90,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="-320" y="-231"/>
         </scene>
-        <!--View Controller - Item 1-->
+        <!--View Controller - Map-->
         <scene sceneID="AQ2-nZ-tBV">
             <objects>
                 <viewController id="mIq-qI-nfK" sceneMemberID="viewController">
@@ -102,20 +123,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Project1.png" translatesAutoresizingMaskIntoConstraints="NO" id="caR-wY-fXg">
+                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caR-wY-fXg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="nZa-x6-Sri"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.png" id="nZa-x6-Sri"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noU-jn-csS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578" y="-744"/>
         </scene>
-        <!--View Controller - Item 2-->
+        <!--View Controller - Project-->
         <scene sceneID="hbr-3a-tYv">
             <objects>
                 <viewController id="Iye-ty-DaP" sceneMemberID="viewController">
@@ -127,20 +148,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Map1.png" translatesAutoresizingMaskIntoConstraints="NO" id="G1G-BO-dKP">
+                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1G-BO-dKP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="WsP-F1-OHY"/>
+                    <tabBarItem key="tabBarItem" title="Project" image="project.png" id="WsP-F1-OHY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRi-l7-YfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578" y="-93"/>
         </scene>
-        <!--Parent View Controller - Item-->
+        <!--Parent View Controller - Camera-->
         <scene sceneID="ZPF-Db-Frd">
             <objects>
                 <viewController id="NNC-9R-yCR" customClass="PWParentViewController" sceneMemberID="viewController">
@@ -162,7 +183,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="2tR-N9-gJf"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera.png" id="2tR-N9-gJf"/>
                     <navigationItem key="navigationItem" id="etP-kI-8zM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9e-l5-rGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -209,12 +230,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Map1.png" width="1190.5587158203125" height="842"/>
-        <image name="Project1.png" width="620" height="859"/>
+        <image name="camera.png" width="33.757030487060547" height="25.505311965942383"/>
+        <image name="map.png" width="24" height="29.256093978881836"/>
+        <image name="project.png" width="23.254844665527344" height="27"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="WGu-Vr-SEX"/>
+    </inferredMetricsTieBreakers>
 </document>
