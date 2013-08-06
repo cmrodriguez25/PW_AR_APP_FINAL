@@ -791,7 +791,7 @@ QCARutils *qUtils = nil; // singleton class
         {
             // Load the data set from the App Bundle
             // If the DataSet were in the Documents folder we'd use STORAGE_ABSOLUTE and the full path
-            if (!theDataSet->load([dataSetPath cStringUsingEncoding:NSASCIIStringEncoding], QCAR::DataSet::STORAGE_APPRESOURCE))
+            if (!theDataSet->load([dataSetPath cStringUsingEncoding:NSASCIIStringEncoding], QCAR::DataSet::STORAGE_ABSOLUTE))
             {
                 msg = msgFailedToLoad;
                 errorCode = QCAR_ERRCODE_LOAD_DATASET;            

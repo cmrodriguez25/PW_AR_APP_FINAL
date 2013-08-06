@@ -13,10 +13,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    QCARutils *qUtils = [QCARutils getInstance];
-    // Provide a list of targets we're expecting - the first in the list is the default
-    [qUtils addTargetName:@"Stones & Chips" atPath:@"StonesAndChips.xml"];
-    [qUtils addTargetName:@"Tarmac" atPath:@"Tarmac.xml"];
     // Override point for customization after application launch.
     return YES;
 }
