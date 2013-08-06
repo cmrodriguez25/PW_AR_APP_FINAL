@@ -11,6 +11,8 @@
 @interface MainMenuViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *menuItems;
+    
 }
+
 
 @end

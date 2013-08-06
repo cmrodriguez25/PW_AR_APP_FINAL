@@ -7,12 +7,15 @@
 //
 
 #import "MainMenuViewController.h"
-
+#import "ProjectListViewController.h"
+#import "TutorialViewController.h"
+#import "AboutUsViewController.h"
 @interface MainMenuViewController ()
 
 @end
 
 @implementation MainMenuViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,22 +52,30 @@
     
     return cell;
 }
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    Player *player = [self.playerArray objectAtIndex:indexPath.row];
-    
-    IPlayerViewController *destination = segue.destinationViewController;
-    destination.player = player;
-}
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath    {
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath    {
     
     
-    if(indexPath.row == 0)
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *cellText = cell.textLabel.text;
+    
+    
+    if([cellText isEqualToString: @"Projects"])
     {
-        
+        ProjectListViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ProjectListView"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if ([cellText isEqualToString:@"Tutorial"])
+    {
+        TutorialViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorialView"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if ([cellText isEqualToString:@"About Us"])
+    {
+        AboutUsViewController*controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUsView"];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -76,4 +87,8 @@
 }
 
 
+- (void)dealloc {
+    
+    [super dealloc];
+}
 @end
