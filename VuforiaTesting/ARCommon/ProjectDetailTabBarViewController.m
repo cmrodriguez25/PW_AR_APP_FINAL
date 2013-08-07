@@ -31,6 +31,11 @@
     NSError *error;
     NSArray *directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:targets error:&error];
     
+    /*
+    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:]
+                                                       options:kNilOptions
+                                                         error:&error];*/
+    
     // For each xml target file in this directory, call Vuforia's "addTarget" method
     for (NSString *item in directoryContents) {
         if([item rangeOfString:@".xml"].location != NSNotFound) {
@@ -38,6 +43,13 @@
                            atPath:[NSString stringWithFormat:@"%@/%@", targets, item]];
         }
     }
+    
+    //NSError *jsonError = nil;
+    
+    
+//NSString *models = [NSString stringWithFormat:@"%@/Models", resourcePath];
+  //  directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: error:<#(NSError **)#>]
+    //NSDictionary *topHitsDictionary = [NSJSONSerialization JSONObjectWithData:<#(NSData *)#> options:<#(NSJSONReadingOptions)#> error:<#(NSError **)#>]
     
     // Load map image into appropriate UIImageView
     NSString *mapImage = [NSString stringWithFormat:@"%@/Map", resourcePath];

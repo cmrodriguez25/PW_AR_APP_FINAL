@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "QCARutils.h"
 
 @implementation AppDelegate
 
