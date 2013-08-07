@@ -209,12 +209,6 @@ bool foundTarget = NO;
         foundTarget = NO;
     }
     
-    [GearVerts JSONValue];
-    [@"Hello" JSONValue];
-    NSString *test = @"Hello";
-    
-    [test JSONValue];
-    
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
     
