@@ -8,7 +8,7 @@
 #import "EAGLView.h"
 #import "Teapot.h"
 #import "Texture2D.h"
-
+#import "Gear.h"
 #import <QCAR/Renderer.h>
 #import <QCAR/VideoBackgroundConfig.h>
 #import "QCARutils.h"
@@ -20,13 +20,13 @@
 namespace {
     // Teapot texture filenames
     const char* textureFilenames[] = {
-        "TextureTeapotBrass.png",
+        "Gear.png",
         "TextureTeapotBlue.png",
         "TextureTeapotRed.png"
     };
     
     // Model scale factor
-    const float kObjectScale = 3.0f;
+    const float kObjectScale = 150.0f;
 }
 
 
@@ -59,15 +59,15 @@ bool foundTarget = NO;
     {
         Object3D *obj3D = [[Object3D alloc] init];
         
-        obj3D.numVertices = NUM_TEAPOT_OBJECT_VERTEX;
-        obj3D.vertices = teapotVertices;
-        obj3D.normals = teapotNormals;
-        obj3D.texCoords = teapotTexCoords;
+        obj3D.numVertices = GearNumVerts;
+        obj3D.vertices = GearVerts;
+        obj3D.normals = GearNormals;
+        obj3D.texCoords = GearTexCoords;
         
-        obj3D.numIndices = NUM_TEAPOT_OBJECT_INDEX;
-        obj3D.indices = teapotIndices;
+        //obj3D.numIndices = NUM_TEAPOT_OBJECT_INDEX;
+        //obj3D.indices = teapotIndices;
         
-        obj3D.texture = [textures objectAtIndex:i];
+        obj3D.texture = [textures objectAtIndex:0];
         
         [objects3D addObject:obj3D];
         [obj3D release];
@@ -85,12 +85,10 @@ bool foundTarget = NO;
 
 - (void) notifyDelegateTargetFound:(NSString *) trgt
 {
-    //[self performSelectorOnMainThread:@selector(targetFound:) withObject:trgt waitUntilDone:YES];
     dispatch_async(dispatch_get_main_queue(),
                    ^{
                        [self.targetFoundDelegate targetFound:trgt];
                    });
-    //[self.targetFoundDelegate targetFound:trgt];
 }
 
 // modify renderFrameQCAR here if you want a different 3D rendering model
@@ -121,7 +119,7 @@ bool foundTarget = NO;
         glEnableClientState(GL_NORMAL_ARRAY);
         glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     }
-    
+
     glEnable(GL_DEPTH_TEST);
     // We must detect if background reflection is active and adjust the culling direction.
     // If the reflection is active, this means the pose matrix has been reflected as well,
@@ -133,6 +131,7 @@ bool foundTarget = NO;
     else
         glFrontFace(GL_CCW);   //Back camera
     
+    glDisable(GL_CULL_FACE);
     if(state.getNumTrackableResults() > 0) {
         // Get the trackable
         const QCAR::TrackableResult* result = state.getTrackableResult(0);
@@ -170,14 +169,15 @@ bool foundTarget = NO;
             glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)obj3D.texCoords);
             glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
             glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
-            glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
+            glDrawArrays(GL_TRIANGLES, 0, GearNumVerts);
         }
 #ifndef USE_OPENGL1
         else {
             // OpenGL 2
             QCAR::Matrix44F modelViewProjection;
             
-            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale, &modelViewMatrix.data[0]);
+            
+            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale - 50, &modelViewMatrix.data[0]);
             ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
             ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
             
@@ -190,19 +190,30 @@ bool foundTarget = NO;
             glEnableVertexAttribArray(vertexHandle);
             glEnableVertexAttribArray(normalHandle);
             glEnableVertexAttribArray(textureCoordHandle);
-            
+
+            glEnable(GL_LIGHTING);
             glActiveTexture(GL_TEXTURE0);
             glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
+            glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            
+            glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+            glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
             glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
             glUniform1i(texSampler2DHandle, 0 /*GL_TEXTURE0*/);
-            glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
-            
+            glDrawArrays(GL_TRIANGLES, 0, GearNumVerts);
             ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
         }
 #endif
     } else {
         foundTarget = NO;
     }
+    
+    [GearVerts JSONValue];
+    [@"Hello" JSONValue];
+    NSString *test = @"Hello";
+    
+    [test JSONValue];
     
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
