@@ -93,7 +93,7 @@
         <!--Project Detail Tab Bar View Controller-->
         <scene sceneID="wr5-59-WOz">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="med-0r-nVI" customClass="ProjectDetailTabBarViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ProjectDetailView" definesPresentationContext="YES" id="med-0r-nVI" customClass="ProjectDetailTabBarViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="c4U-kh-m3N"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nVL-29-dgz">
