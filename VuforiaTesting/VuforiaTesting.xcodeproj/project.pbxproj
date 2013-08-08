@@ -199,6 +199,7 @@
 		134FC0A717B17DA300788E95 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		134FC0A817B17DA300788E95 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		1354CB5817B3D9DA003DAFF7 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		1354CB5B17B3E181003DAFF7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		13CA2AC017AAFF1E0056936D /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = ../libQCAR.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +239,7 @@
 		128A9D5F17A8084F00B1298B = {
 			isa = PBXGroup;
 			children = (
+				1354CB5B17B3E181003DAFF7 /* Default.png */,
 				130D892317ABE2D2005F9F63 /* VuforiaTesting */,
 				13CA2AC217AB02100056936D /* Storyboard */,
 				128A9DE917A96F8000B1298B /* ARCommon */,
@@ -546,7 +548,6 @@
 				130D89AB17ABE2D2005F9F63 /* Tarmac.xml in Resources */,
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
 				130D89A917ABE2D2005F9F63 /* StonesAndChips.xml in Resources */,
-				12369D6A17B280D700DCC1DD /* Projects in Resources */,
 				1354CB5917B3D9DA003DAFF7 /* Tutorial.storyboard in Resources */,
 				130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */,
 				130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */,
@@ -708,7 +709,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -732,7 +732,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
