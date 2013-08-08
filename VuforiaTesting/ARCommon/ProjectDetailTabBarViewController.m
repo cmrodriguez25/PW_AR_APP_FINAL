@@ -90,9 +90,10 @@
     // with the project name once the user selects the correct project.
   //  [self prepareProjectDetail:@"Project1"];
     
-    
-    [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
-//[[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+    if([self.tabBar respondsToSelector:@selector(setBarTintColor:)]) {
+        [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
+        [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+    }
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.translucent = YES;

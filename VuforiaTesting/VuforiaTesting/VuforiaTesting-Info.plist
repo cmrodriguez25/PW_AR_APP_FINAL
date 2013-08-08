@@ -31,7 +31,7 @@
 	<key>UILaunchImageFile~iphone</key>
 	<string>Default.png</string>
 	<key>UIMainStoryboardFile</key>
-	<string>ProjectDetail</string>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
