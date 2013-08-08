@@ -79,7 +79,7 @@
 		12369D7017B2997B00DCC1DD /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
 		12369D7617B3D24E00DCC1DD /* Projects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Projects; path = Assets/Projects; sourceTree = "<group>"; };
 		12369D7817B3E14800DCC1DD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Assets/Default.png; sourceTree = "<group>"; };
-		12369D7917B3E19100DCC1DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Assets/Default-568h@2x.png"; sourceTree = "<group>"; };
+		12369D7917B3E19100DCC1DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "VuforiaTesting/Resources/Assets/Default-568h@2x.png"; sourceTree = "<group>"; };
 		123BEEB317ADAD8B007393CA /* ProjectDetailTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectDetailTabBarViewController.h; path = ../ARCommon/ProjectDetailTabBarViewController.h; sourceTree = "<group>"; };
 		123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectDetailTabBarViewController.m; path = ../ARCommon/ProjectDetailTabBarViewController.m; sourceTree = "<group>"; };
 		125D302C17AC175F00AC67CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/ProjectDetail.storyboard; sourceTree = "<group>"; };
@@ -241,6 +241,7 @@
 		128A9D5F17A8084F00B1298B = {
 			isa = PBXGroup;
 			children = (
+				12369D7917B3E19100DCC1DD /* Default-568h@2x.png */,
 				1354CB5B17B3E181003DAFF7 /* Default.png */,
 				130D892317ABE2D2005F9F63 /* VuforiaTesting */,
 				13CA2AC217AB02100056936D /* Storyboard */,
@@ -424,7 +425,6 @@
 		130D897B17ABE2D2005F9F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				12369D7917B3E19100DCC1DD /* Default-568h@2x.png */,
 				12369D7817B3E14800DCC1DD /* Default.png */,
 				12369D7617B3D24E00DCC1DD /* Projects */,
 				130D897C17ABE2D2005F9F63 /* Assets */,
