@@ -29,8 +29,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    menuItems = [[NSMutableArray alloc]initWithObjects:@"Projects",@"Tutorial",@"About Us", nil];
-	// Do any additional setup after loading the view.
+    menuItems = [[NSMutableArray alloc]initWithObjects:@"Projects",@"Tutorial",@"About Us", @"???", nil];
+	
+    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.translucent = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,6 +79,10 @@
     {
         AboutUsViewController*controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUsView"];
         [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if ([cellText isEqualToString:@"???"])
+    {
+        
     }
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

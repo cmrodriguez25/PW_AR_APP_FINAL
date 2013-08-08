@@ -88,11 +88,11 @@
     // DELETE: This is for testing purposes only.
     // prepareProjectDetail should be called by MainMenuViewController
     // with the project name once the user selects the correct project.
-    [self prepareProjectDetail:@"Project_1"];
+  //  [self prepareProjectDetail:@"Project1"];
     
     
     [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
-    [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+//[[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.translucent = YES;

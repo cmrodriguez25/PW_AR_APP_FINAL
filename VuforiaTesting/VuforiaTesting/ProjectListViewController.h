@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectListViewController : UIViewController
+@interface ProjectListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray *listOfProjects;
+}
 
 @end
