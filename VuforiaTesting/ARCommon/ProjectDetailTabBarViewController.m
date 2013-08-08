@@ -8,7 +8,7 @@
 
 #import "ProjectDetailTabBarViewController.h"
 #import "QCARutils.h"
-
+#import "PWParentViewController.h"
 
 @implementation ProjectDetailTabBarViewController
 
@@ -31,11 +31,6 @@
     NSError *error;
     NSArray *directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:targets error:&error];
     
-    /*
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:]
-                                                       options:kNilOptions
-                                                         error:&error];*/
-    
     // For each xml target file in this directory, call Vuforia's "addTarget" method
     for (NSString *item in directoryContents) {
         if([item rangeOfString:@".xml"].location != NSNotFound) {
@@ -44,12 +39,21 @@
         }
     }
     
-    //NSError *jsonError = nil;
     
     
-//NSString *models = [NSString stringWithFormat:@"%@/Models", resourcePath];
-  //  directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: error:<#(NSError **)#>]
-    //NSDictionary *topHitsDictionary = [NSJSONSerialization JSONObjectWithData:<#(NSData *)#> options:<#(NSJSONReadingOptions)#> error:<#(NSError **)#>]
+    NSString *models = [NSString stringWithFormat:@"%@/Models", resourcePath];
+    directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:models error:&error];
+    _modelDict = [[NSMutableDictionary alloc] init];
+    
+    for(NSString *item in directoryContents) {
+        NSString *jsonString = [NSString stringWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", models, item]
+                                                     encoding:NSUTF8StringEncoding error:&error];
+        
+        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSDictionary *model = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+        [_modelDict setObject:model forKey:[item stringByReplacingOccurrencesOfString:@".txt" withString:@""]];
+    }
     
     // Load map image into appropriate UIImageView
     NSString *mapImage = [NSString stringWithFormat:@"%@/Map", resourcePath];
@@ -65,7 +69,7 @@
     imgView = (UIImageView *)[viewController.view viewWithTag:100];
     imgView.image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", projectImage, directoryContents[0]]];
     
-    
+    [(PWParentViewController *)self.viewControllers[2] initWithModelDict:_modelDict];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12369D6A17B280D700DCC1DD /* Projects in Resources */ = {isa = PBXBuildFile; fileRef = 12369D6917B280D700DCC1DD /* Projects */; };
 		12369D6B17B2828D00DCC1DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12369D6617B27DB100DCC1DD /* Main.storyboard */; };
 		12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
 		12369D7117B2997B00DCC1DD /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7017B2997B00DCC1DD /* Gear.png */; };
+		12369D7717B3D24E00DCC1DD /* Projects in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7617B3D24E00DCC1DD /* Projects */; };
 		123BEEB117ADA507007393CA /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 130D896617ABE2D2005F9F63 /* libQCAR.a */; };
 		123BEEB517ADAD8B007393CA /* ProjectDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */; };
 		128A9D6C17A8084F00B1298B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6B17A8084F00B1298B /* Foundation.framework */; };
@@ -74,9 +74,9 @@
 
 /* Begin PBXFileReference section */
 		12369D6717B27DB100DCC1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		12369D6917B280D700DCC1DD /* Projects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Projects; path = Assets/Projects; sourceTree = "<group>"; };
 		12369D6D17B28EA200DCC1DD /* Gear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gear.h; sourceTree = "<group>"; };
 		12369D7017B2997B00DCC1DD /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
+		12369D7617B3D24E00DCC1DD /* Projects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Projects; path = Assets/Projects; sourceTree = "<group>"; };
 		123BEEB317ADAD8B007393CA /* ProjectDetailTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectDetailTabBarViewController.h; path = ../ARCommon/ProjectDetailTabBarViewController.h; sourceTree = "<group>"; };
 		123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectDetailTabBarViewController.m; path = ../ARCommon/ProjectDetailTabBarViewController.m; sourceTree = "<group>"; };
 		125D302C17AC175F00AC67CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/ProjectDetail.storyboard; sourceTree = "<group>"; };
@@ -418,7 +418,7 @@
 		130D897B17ABE2D2005F9F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				12369D6917B280D700DCC1DD /* Projects */,
+				12369D7617B3D24E00DCC1DD /* Projects */,
 				130D897C17ABE2D2005F9F63 /* Assets */,
 			);
 			path = Resources;
@@ -530,6 +530,7 @@
 			files = (
 				12369D6B17B2828D00DCC1DD /* Main.storyboard in Resources */,
 				12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */,
+				12369D7717B3D24E00DCC1DD /* Projects in Resources */,
 				12A4F4F217B1440900F7930E /* camera.png in Resources */,
 				12A4F4F317B1440900F7930E /* map.png in Resources */,
 				12A4F4F417B1440900F7930E /* project.png in Resources */,
@@ -542,7 +543,6 @@
 				130D89AB17ABE2D2005F9F63 /* Tarmac.xml in Resources */,
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
 				130D89A917ABE2D2005F9F63 /* StonesAndChips.xml in Resources */,
-				12369D6A17B280D700DCC1DD /* Projects in Resources */,
 				130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */,
 				130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */,
 				130D89A817ABE2D2005F9F63 /* StonesAndChips.dat in Resources */,

@@ -7,12 +7,28 @@
 //
 
 #import "PWARViewController.h"
+#import "EAGLView.h"
 
 @interface PWARViewController ()
 
 @end
 
 @implementation PWARViewController
+
+- (id) initWithModelDict:(NSMutableDictionary *)modelDict
+{
+    self = [super init];
+    if (self) {
+        _modelDict = modelDict;
+    }
+    
+    return self;
+}
+
+- (void) loadView {
+    [super loadView];
+    [arView setModelDict:_modelDict];
+}
 
 - (void) targetFound:(NSString *)target
 {

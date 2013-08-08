@@ -18,6 +18,16 @@ extern bool isInterfaceOrientationPortrait;
     [HUDVC displayText:target];
 }
 
+-(id)initWithModelDict:(NSMutableDictionary *)modelDict
+{
+    self = [super init];
+    if (self) {
+        _modelDict = modelDict;
+    }
+    
+    return self;
+}
+
 -(void)loadView
 {
     NSLog(@"ImageTargetsParentViewController: creating");
@@ -29,7 +39,7 @@ extern bool isInterfaceOrientationPortrait;
     [self createParentViewAndSplashContinuation];
     
     // Add the EAGLView
-    arViewController = [[PWARViewController alloc] init];
+    arViewController = [[PWARViewController alloc] initWithModelDict:_modelDict];
     arViewController.targetFoundDelegate = self;
     
     
