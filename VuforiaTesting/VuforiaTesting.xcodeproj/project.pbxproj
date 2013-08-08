@@ -58,6 +58,7 @@
 		134FC0A317B17D2B00788E95 /* ProjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A217B17D2B00788E95 /* ProjectListViewController.m */; };
 		134FC0A617B17D5D00788E95 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A517B17D5D00788E95 /* AboutUsViewController.m */; };
 		134FC0A917B17DA300788E95 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A817B17DA300788E95 /* TutorialViewController.m */; };
+		1354CB5917B3D9DA003DAFF7 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1354CB5817B3D9DA003DAFF7 /* Tutorial.storyboard */; };
 		13B8404517AC561E00174CED /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A9DF117A96F8000B1298B /* OverlayView.m */; };
 		13B8404617AC561E00174CED /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 128A9DF517A96F8000B1298B /* QCARutils.mm */; };
 /* End PBXBuildFile section */
@@ -197,6 +198,7 @@
 		134FC0A517B17D5D00788E95 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		134FC0A717B17DA300788E95 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		134FC0A817B17DA300788E95 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		1354CB5817B3D9DA003DAFF7 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		13CA2AC017AAFF1E0056936D /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = ../libQCAR.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -448,6 +450,7 @@
 			children = (
 				12369D6617B27DB100DCC1DD /* Main.storyboard */,
 				125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */,
+				1354CB5817B3D9DA003DAFF7 /* Tutorial.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
 				130D89A917ABE2D2005F9F63 /* StonesAndChips.xml in Resources */,
 				12369D6A17B280D700DCC1DD /* Projects in Resources */,
+				1354CB5917B3D9DA003DAFF7 /* Tutorial.storyboard in Resources */,
 				130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */,
 				130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */,
 				130D89A817ABE2D2005F9F63 /* StonesAndChips.dat in Resources */,
