@@ -13,6 +13,8 @@
 @interface PWParentViewController : ARParentViewController <ARTargetFoundDelegate> {
     HUDViewController* HUDVC;
     UIWindow* window;
+    NSMutableDictionary* _modelDict;
 }
 
+-(id)initWithModelDict:(NSMutableDictionary *)modelDict;
 @end

@@ -12,6 +12,7 @@
 @interface ProjectDetailTabBarViewController : UITabBarController {
     @private
     NSString *_projectName;
+    NSMutableDictionary *_modelDict;
 }
 
 -(void)prepareProjectDetail: (NSString *)projectName;

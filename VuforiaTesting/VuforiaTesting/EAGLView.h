@@ -8,8 +8,10 @@
 
 #import "AR_EAGLView.h"
 #import "ARTargetFoundDelegate.h"
-@interface EAGLView : AR_EAGLView
+@interface EAGLView : AR_EAGLView {
+    NSMutableDictionary *modelDict;
+}
 
     @property (nonatomic, retain) id <ARTargetFoundDelegate> targetFoundDelegate;
-
+    @property (nonatomic, retain) NSMutableDictionary* modelDict;
 @end

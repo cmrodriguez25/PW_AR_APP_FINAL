@@ -10,6 +10,12 @@
 #import "ARTargetFoundDelegate.h"
 #import "EAGLView.h"
 
-@interface PWARViewController : ARViewController <ARTargetFoundDelegate>
-    @property (nonatomic, retain) id <ARTargetFoundDelegate> targetFoundDelegate;
+@interface PWARViewController : ARViewController <ARTargetFoundDelegate> {
+    NSMutableDictionary* _modelDict;
+}
+
+@property (nonatomic, retain) id <ARTargetFoundDelegate> targetFoundDelegate;
+
+-(id)initWithModelDict:(NSDictionary*)modelDict;
+
 @end

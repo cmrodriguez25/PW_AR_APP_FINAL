@@ -32,6 +32,8 @@ namespace {
 
 @implementation EAGLView
 
+@synthesize modelDict = _modelDict;
+
 bool foundTarget = NO;
 
 - (id)initWithFrame:(CGRect)frame
@@ -55,7 +57,7 @@ bool foundTarget = NO;
     // but using the same underlying 3D model of a teapot, differentiated
     // by using a different texture for each
     
-    for (int i=0; i < [textures count]; i++)
+    /*for (int i=0; i < [textures count]; i++)
     {
         Object3D *obj3D = [[Object3D alloc] init];
         
@@ -71,7 +73,7 @@ bool foundTarget = NO;
         
         [objects3D addObject:obj3D];
         [obj3D release];
-    }
+    }*/
 }
 
 
@@ -150,7 +152,9 @@ bool foundTarget = NO;
         else if (!strcmp(trackable.getName(), "tarmac"))
             targetIndex = 2;
         
-        Object3D *obj3D = [objects3D objectAtIndex:targetIndex];
+        //Object3D *obj3D = [objects3D objectAtIndex:targetIndex];
+        
+        NSString *targetName = [NSString stringWithUTF8String:trackable.getName()];
         
         // Render using the appropriate version of OpenGL
         if (QCAR::GL_11 & qUtils.QCARFlags) {
@@ -165,14 +169,27 @@ bool foundTarget = NO;
             glScalef(kObjectScale, kObjectScale, kObjectScale);
             
             // Draw object
-            glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
-            glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)obj3D.texCoords);
-            glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
-            glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
-            glDrawArrays(GL_TRIANGLES, 0, GearNumVerts);
+            //glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
+            
+            NSMutableDictionary *instanceModelDict = [self.modelDict objectForKey:targetName];
+            
+            //glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)obj3D.texCoords);
+            glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)[instanceModelDict objectForKey:@"TexCoords"]);
+            
+            //glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
+            glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)[instanceModelDict objectForKey:@"Verts"]);
+            
+                            
+            //glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
+            glNormalPointer(GL_FLOAT, 0, (const GLvoid*)[instanceModelDict objectForKey:@"Normals"]);
+            
+            glDrawArrays(GL_TRIANGLES, 0, (int)[instanceModelDict objectForKey:@"NumVerts"]);
         }
 #ifndef USE_OPENGL1
         else {
+            
+            NSMutableDictionary *instanceModelDict = [self.modelDict objectForKey:targetName];
+
             // OpenGL 2
             QCAR::Matrix44F modelViewProjection;
             
@@ -183,9 +200,34 @@ bool foundTarget = NO;
             
             glUseProgram(shaderProgramID);
             
-            glVertexAttribPointer(vertexHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.vertices);
-            glVertexAttribPointer(normalHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.normals);
-            glVertexAttribPointer(textureCoordHandle, 2, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.texCoords);
+            
+            //glVertexAttribPointer(vertexHandle, 3, GL_FLOAT, GL_FALSE)
+            NSArray *verts = (NSArray *)[instanceModelDict objectForKey:@"Verts"];
+            float *vertsArray = (float *)malloc([verts count] * sizeof(float));
+
+            [verts enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                vertsArray[idx] = [(NSNumber *)obj floatValue];
+            }];
+            
+
+            glVertexAttribPointer(vertexHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)vertsArray);
+
+            NSArray *norms = (NSArray *)[instanceModelDict objectForKey:@"Normals"];
+            float *normArray = (float *)malloc([norms count] * sizeof(float));
+            
+            [norms enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                normArray[idx] = [(NSNumber *)obj floatValue];
+            }];
+            
+            glVertexAttribPointer(normalHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)normArray);
+            
+            NSArray *tex = (NSArray *)[instanceModelDict objectForKey:@"TexCoords"];
+            float *texArray = (float *)malloc([tex count] * sizeof(float));
+            
+            [tex enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                texArray[idx] = [(NSNumber *)obj floatValue];
+            }];
+            glVertexAttribPointer(textureCoordHandle, 2, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)texArray);
             
             glEnableVertexAttribArray(vertexHandle);
             glEnableVertexAttribArray(normalHandle);
@@ -193,7 +235,7 @@ bool foundTarget = NO;
 
             glEnable(GL_LIGHTING);
             glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
+            //glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
             glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
             glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
             
@@ -201,7 +243,8 @@ bool foundTarget = NO;
             glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
             glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
             glUniform1i(texSampler2DHandle, 0 /*GL_TEXTURE0*/);
-            glDrawArrays(GL_TRIANGLES, 0, GearNumVerts);
+            int numVerts = [(NSNumber *)([instanceModelDict objectForKey:@"NumVerts"]) intValue];
+            glDrawArrays(GL_TRIANGLES, 0, numVerts);
             ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
         }
 #endif
