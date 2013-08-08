@@ -29,6 +29,8 @@
     [super viewDidLoad];
    // listOfProjects = [[NSMutableArray alloc]init];
     self.navigationItem.title = @"Projects";
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.translucent = YES;
 	// Do any additional setup after loading the view.
      NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
     
@@ -38,11 +40,7 @@
     
     NSArray *directoryContents = [[NSArray alloc]init];
      directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:resourcePath error:&error];
-    
-    for(int i =0; i < [directoryContents count]; i ++)
-    {
-        NSLog(@"contents: %@",[directoryContents objectAtIndex:i]);
-    }
+
     listOfProjects = [[NSMutableArray alloc]initWithArray:directoryContents];
     
     
@@ -54,6 +52,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [self viewDidLoad];
+}
+
 
 #pragma TABLE VIEW METHODS
 

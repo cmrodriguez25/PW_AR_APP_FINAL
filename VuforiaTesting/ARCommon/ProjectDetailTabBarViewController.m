@@ -87,8 +87,8 @@
   //  [self prepareProjectDetail:@"Project1"];
     
     
-   // [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
-   // [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
+//[[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.translucent = YES;
