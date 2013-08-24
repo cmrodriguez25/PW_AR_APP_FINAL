@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Tank" size="200.000000 142.505127" />
+    <ImageTarget name="Speakers" size="100.000000 58.133335" />
+    <ImageTarget name="Room309" size="50.000000 49.142857" />
+    <ImageTarget name="Stair1Floor" size="200.000000 191.967865" />
+    <ImageTarget name="Campus_Drive_Close_Up" size="100.000000 42.148762" />
+    <ImageTarget name="Campus_Drive" size="500.000000 375.000000" />
+    <ImageTarget name="Stones" size="639.000000 445.303131" />
+  </Tracking>
+</QCARConfig>
