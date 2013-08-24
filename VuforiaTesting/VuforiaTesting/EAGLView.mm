@@ -26,7 +26,7 @@ namespace {
     };
     
     // Model scale factor
-    const float kObjectScale = 150.0f;
+    const float kObjectScale = 500.0f;
 }
 
 
@@ -56,24 +56,6 @@ bool foundTarget = NO;
     // in this example we have 3 targets and require 3 models
     // but using the same underlying 3D model of a teapot, differentiated
     // by using a different texture for each
-    
-    /*for (int i=0; i < [textures count]; i++)
-    {
-        Object3D *obj3D = [[Object3D alloc] init];
-        
-        obj3D.numVertices = GearNumVerts;
-        obj3D.vertices = GearVerts;
-        obj3D.normals = GearNormals;
-        obj3D.texCoords = GearTexCoords;
-        
-        //obj3D.numIndices = NUM_TEAPOT_OBJECT_INDEX;
-        //obj3D.indices = teapotIndices;
-        
-        obj3D.texture = [textures objectAtIndex:0];
-        
-        [objects3D addObject:obj3D];
-        [obj3D release];
-    }*/
 }
 
 
@@ -194,7 +176,7 @@ bool foundTarget = NO;
             QCAR::Matrix44F modelViewProjection;
             
             
-            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale - 50, &modelViewMatrix.data[0]);
+            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale + 200, &modelViewMatrix.data[0]);
             ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
             ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
             
@@ -208,13 +190,13 @@ bool foundTarget = NO;
             [verts enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 vertsArray[idx] = [(NSNumber *)obj floatValue];
             }];
-            
-
             glVertexAttribPointer(vertexHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)vertsArray);
 
+            
             NSArray *norms = (NSArray *)[instanceModelDict objectForKey:@"Normals"];
             float *normArray = (float *)malloc([norms count] * sizeof(float));
             
+
             [norms enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 normArray[idx] = [(NSNumber *)obj floatValue];
             }];
@@ -227,15 +209,16 @@ bool foundTarget = NO;
             [tex enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 texArray[idx] = [(NSNumber *)obj floatValue];
             }];
+
             glVertexAttribPointer(textureCoordHandle, 2, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)texArray);
-            
             glEnableVertexAttribArray(vertexHandle);
             glEnableVertexAttribArray(normalHandle);
             glEnableVertexAttribArray(textureCoordHandle);
-
+            
+            Texture *texture = [textures objectAtIndex:0];
             glEnable(GL_LIGHTING);
             glActiveTexture(GL_TEXTURE0);
-            //glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
+            glBindTexture(GL_TEXTURE_2D, texture.textureID);
             glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
             glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
             
@@ -246,6 +229,11 @@ bool foundTarget = NO;
             int numVerts = [(NSNumber *)([instanceModelDict objectForKey:@"NumVerts"]) intValue];
             glDrawArrays(GL_TRIANGLES, 0, numVerts);
             ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
+            
+            delete vertsArray;
+            delete normArray;
+            delete texArray;
+
         }
 #endif
     } else {
