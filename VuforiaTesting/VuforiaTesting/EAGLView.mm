@@ -176,7 +176,7 @@ bool foundTarget = NO;
             QCAR::Matrix44F modelViewProjection;
             
             
-            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale + 200, &modelViewMatrix.data[0]);
+            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale + 50, &modelViewMatrix.data[0]);
             ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
             ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
             
