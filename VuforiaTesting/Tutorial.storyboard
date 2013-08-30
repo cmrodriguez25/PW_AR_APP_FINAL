@@ -9,7 +9,7 @@
         <scene sceneID="vwp-Yb-eVV">
             <objects>
                 <tabBarController storyboardIdentifier="TutorialTabBarView" definesPresentationContext="YES" id="4xf-BE-mx6" customClass="TutorialTabBarController" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="TWC-tf-WN9">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -45,7 +45,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Step 1" image="circles.jpeg" id="glY-J2-i1Z"/>
+                    <tabBarItem key="tabBarItem" title="Step 1" image="circles.png" id="glY-J2-i1Z"/>
                     <navigationItem key="navigationItem" id="Ggs-I8-4gh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2n-xm-y18" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,7 +71,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Step 3" image="circles.jpeg" id="5pG-0i-09H"/>
+                    <tabBarItem key="tabBarItem" title="Step 3" image="circles.png" id="5pG-0i-09H"/>
                     <navigationItem key="navigationItem" id="Pqa-hE-z8p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FjO-GS-nHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Step 4" image="circles.jpeg" id="n5p-uN-sJB"/>
+                    <tabBarItem key="tabBarItem" title="Step 4" image="circles.png" id="n5p-uN-sJB"/>
                     <navigationItem key="navigationItem" id="VO8-qp-FpK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q48-qj-tz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -123,7 +123,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Step 2" image="circles.jpeg" id="y90-Ue-Tdp"/>
+                    <tabBarItem key="tabBarItem" title="Step 2" image="circles.png" id="y90-Ue-Tdp"/>
                     <navigationItem key="navigationItem" id="njM-yx-8wl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfq-eI-7X6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,7 +132,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circles.jpeg" width="232" height="217"/>
+        <image name="circles.png" width="40" height="40"/>
         <image name="tutorial1.png" width="83" height="88"/>
         <image name="tutorial2.png" width="84" height="88"/>
         <image name="tutorial3.png" width="110" height="138"/>

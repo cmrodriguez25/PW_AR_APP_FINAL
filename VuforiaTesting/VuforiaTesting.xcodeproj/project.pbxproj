@@ -11,7 +11,6 @@
 		12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
 		12369D7117B2997B00DCC1DD /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7017B2997B00DCC1DD /* Gear.png */; };
 		12369D7717B3D24E00DCC1DD /* Projects in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7617B3D24E00DCC1DD /* Projects */; };
-		123BEEB117ADA507007393CA /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 130D896617ABE2D2005F9F63 /* libQCAR.a */; };
 		123BEEB517ADAD8B007393CA /* ProjectDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */; };
 		128A9D6C17A8084F00B1298B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6B17A8084F00B1298B /* Foundation.framework */; };
 		128A9D6E17A8084F00B1298B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6D17A8084F00B1298B /* CoreGraphics.framework */; };
@@ -55,6 +54,9 @@
 		130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */ = {isa = PBXBuildFile; fileRef = 130D898317ABE2D2005F9F63 /* TextureTeapotBrass.png */; };
 		130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 130D898417ABE2D2005F9F63 /* TextureTeapotRed.png */; };
 		130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130D898817ABE2D2005F9F63 /* VuforiaTesting-Info.plist */; };
+		130FA5D917D11238005AA19D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 130FA5D817D11238005AA19D /* Default-568h@2x.png */; };
+		130FA5DE17D115A1005AA19D /* circles.png in Resources */ = {isa = PBXBuildFile; fileRef = 130FA5DD17D11550005AA19D /* circles.png */; };
+		130FA5DF17D11773005AA19D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 130FA5DC17D11438005AA19D /* Default.png */; };
 		134FC0A317B17D2B00788E95 /* ProjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A217B17D2B00788E95 /* ProjectListViewController.m */; };
 		134FC0A617B17D5D00788E95 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A517B17D5D00788E95 /* AboutUsViewController.m */; };
 		134FC0A917B17DA300788E95 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A817B17DA300788E95 /* TutorialViewController.m */; };
@@ -68,7 +70,7 @@
 		1386C5FD17D0E0AD00A9E4B6 /* tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1386C5EC17D0D43900A9E4B6 /* tutorial3.png */; };
 		1386C5FE17D0E0B000A9E4B6 /* tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1386C5EB17D0D43900A9E4B6 /* tutorial4.png */; };
 		1386C60117D0E27300A9E4B6 /* TutorialTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1386C60017D0E27300A9E4B6 /* TutorialTabBarController.m */; };
-		1386C60317D0E9EF00A9E4B6 /* circles.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1386C60217D0E8B800A9E4B6 /* circles.jpeg */; };
+		1386C6A517D10FF300A9E4B6 /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CA2AC017AAFF1E0056936D /* libQCAR.a */; };
 		13B8404517AC561E00174CED /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A9DF117A96F8000B1298B /* OverlayView.m */; };
 		13B8404617AC561E00174CED /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 128A9DF517A96F8000B1298B /* QCARutils.mm */; };
 /* End PBXBuildFile section */
@@ -201,6 +203,9 @@
 		130D898717ABE2D2005F9F63 /* Texture2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Texture2D.m; sourceTree = "<group>"; };
 		130D898817ABE2D2005F9F63 /* VuforiaTesting-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VuforiaTesting-Info.plist"; sourceTree = "<group>"; };
 		130D898917ABE2D2005F9F63 /* VuforiaTesting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VuforiaTesting-Prefix.pch"; sourceTree = "<group>"; };
+		130FA5D817D11238005AA19D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		130FA5DC17D11438005AA19D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../../Default.png; sourceTree = "<group>"; };
+		130FA5DD17D11550005AA19D /* circles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circles.png; sourceTree = "<group>"; };
 		134FC0A117B17D2B00788E95 /* ProjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectListViewController.h; sourceTree = "<group>"; };
 		134FC0A217B17D2B00788E95 /* ProjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectListViewController.m; sourceTree = "<group>"; };
 		134FC0A417B17D5D00788E95 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
@@ -222,9 +227,7 @@
 		1386C5F917D0D72F00A9E4B6 /* TFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFourthViewController.m; sourceTree = "<group>"; };
 		1386C5FF17D0E27300A9E4B6 /* TutorialTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialTabBarController.h; sourceTree = "<group>"; };
 		1386C60017D0E27300A9E4B6 /* TutorialTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialTabBarController.m; sourceTree = "<group>"; };
-		1386C60217D0E8B800A9E4B6 /* circles.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = circles.jpeg; sourceTree = "<group>"; };
 		13CA2AC017AAFF1E0056936D /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = ../libQCAR.a; sourceTree = "<group>"; };
-		13DB238217B3EB2900039DC8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				123BEEB117ADA507007393CA /* libQCAR.a in Frameworks */,
+				1386C6A517D10FF300A9E4B6 /* libQCAR.a in Frameworks */,
 				128A9DD817A85D2D00B1298B /* SystemConfiguration.framework in Frameworks */,
 				128A9D6E17A8084F00B1298B /* CoreGraphics.framework in Frameworks */,
 				128A9DD617A85D1300B1298B /* CoreMotion.framework in Frameworks */,
@@ -263,8 +266,10 @@
 		128A9D5F17A8084F00B1298B = {
 			isa = PBXGroup;
 			children = (
+				130FA5DD17D11550005AA19D /* circles.png */,
+				130FA5DC17D11438005AA19D /* Default.png */,
+				130FA5D817D11238005AA19D /* Default-568h@2x.png */,
 				1386C5EA17D0D40B00A9E4B6 /* TutorialFiles */,
-				13DB238217B3EB2900039DC8 /* Default.png */,
 				130D892317ABE2D2005F9F63 /* VuforiaTesting */,
 				13CA2AC217AB02100056936D /* Storyboard */,
 				128A9DE917A96F8000B1298B /* ARCommon */,
@@ -474,7 +479,6 @@
 		1386C5EA17D0D40B00A9E4B6 /* TutorialFiles */ = {
 			isa = PBXGroup;
 			children = (
-				1386C60217D0E8B800A9E4B6 /* circles.jpeg */,
 				1386C5EF17D0D6ED00A9E4B6 /* TFirstViewController.h */,
 				1386C5EB17D0D43900A9E4B6 /* tutorial4.png */,
 				1386C5EC17D0D43900A9E4B6 /* tutorial3.png */,
@@ -586,13 +590,13 @@
 				12A4F4F217B1440900F7930E /* camera.png in Resources */,
 				1386C5FD17D0E0AD00A9E4B6 /* tutorial3.png in Resources */,
 				12A4F4F317B1440900F7930E /* map.png in Resources */,
+				130FA5DF17D11773005AA19D /* Default.png in Resources */,
 				12A4F4F417B1440900F7930E /* project.png in Resources */,
 				130D89AA17ABE2D2005F9F63 /* Tarmac.dat in Resources */,
 				130D89AC17ABE2D2005F9F63 /* TextureTeapotBlue.png in Resources */,
 				12369D7117B2997B00DCC1DD /* Gear.png in Resources */,
 				130D89A017ABE2D2005F9F63 /* InfoPlist.strings in Resources */,
 				130D89A217ABE2D2005F9F63 /* Images.xcassets in Resources */,
-				1386C60317D0E9EF00A9E4B6 /* circles.jpeg in Resources */,
 				130D89A717ABE2D2005F9F63 /* about.html in Resources */,
 				130D89AB17ABE2D2005F9F63 /* Tarmac.xml in Resources */,
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
@@ -603,6 +607,8 @@
 				130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */,
 				1386C5FE17D0E0B000A9E4B6 /* tutorial4.png in Resources */,
 				130D89A817ABE2D2005F9F63 /* StonesAndChips.dat in Resources */,
+				130FA5D917D11238005AA19D /* Default-568h@2x.png in Resources */,
+				130FA5DE17D115A1005AA19D /* circles.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,7 +771,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -773,12 +778,7 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = include;
 				INFOPLIST_FILE = "VuforiaTesting/VuforiaTesting-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/michell/Desktop/Test/trunk/VuforiaTesting,
-					"/Users/cynthiabesada/Documents/Perkins+Will/PW_AR_APP_FINAL/PW_AR_APP_FINAL/VuforiaTesting",
-					/Users/michell/Desktop/PW_AR_APP_FINAL/VuforiaTesting,
-				);
+				LIBRARY_SEARCH_PATHS = "/Users/cynthiabesada/Documents/Perkins+Will/PW_AR_APP_FINAL/PW_AR_APP_FINAL";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -789,19 +789,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VuforiaTesting/VuforiaTesting-Prefix.pch";
 				INFOPLIST_FILE = "VuforiaTesting/VuforiaTesting-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/michell/Desktop/Test/trunk/VuforiaTesting,
-					"/Users/cynthiabesada/Documents/Perkins+Will/PW_AR_APP_FINAL/PW_AR_APP_FINAL/VuforiaTesting",
-					/Users/michell/Desktop/PW_AR_APP_FINAL/VuforiaTesting,
-				);
+				LIBRARY_SEARCH_PATHS = "/Users/cynthiabesada/Documents/Perkins+Will/PW_AR_APP_FINAL/PW_AR_APP_FINAL";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

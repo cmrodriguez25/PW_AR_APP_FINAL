@@ -8,7 +8,7 @@
         <!--Main Menu View Controller - Main Menu-->
         <scene sceneID="AGf-wp-H9K">
             <objects>
-                <tableViewController storyboardIdentifier="MMenu" id="3GJ-Yu-Nxr" customClass="MainMenuViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MMenu" wantsFullScreenLayout="YES" id="3GJ-Yu-Nxr" customClass="MainMenuViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="83" sectionHeaderHeight="22" sectionFooterHeight="22" id="kyH-Eh-Srf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,6 +19,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Main Menu" id="v9n-UP-YPr"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m45-HW-e3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +46,7 @@
         <!--About Us View Controller-->
         <scene sceneID="1Ub-Ul-bOh">
             <objects>
-                <viewController storyboardIdentifier="AboutUsView" id="Xp6-nr-JpI" customClass="AboutUsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutUsView" wantsFullScreenLayout="YES" id="Xp6-nr-JpI" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hke-ls-Ih6"/>
                         <viewControllerLayoutGuide type="bottom" id="RR8-QS-cfa"/>
@@ -84,6 +85,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6N-u6-fEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,8 +94,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Eki-Qw-So9">
             <objects>
-                <navigationController definesPresentationContext="YES" id="3FN-zV-nHQ" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="3FN-zV-nHQ" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zbm-zS-wPf">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -109,7 +112,7 @@
         <!--Parent View Controller - Item-->
         <scene sceneID="ZPF-Db-Frd">
             <objects>
-                <viewController id="NNC-9R-yCR" customClass="PWParentViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="NNC-9R-yCR" customClass="PWParentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HwT-OZ-wMV"/>
                         <viewControllerLayoutGuide type="bottom" id="d8X-sM-nPU"/>
@@ -138,7 +141,7 @@
         <!--View Controller-->
         <scene sceneID="OAw-2Q-Q2V">
             <objects>
-                <viewController storyboardIdentifier="HUDVC" id="Mwo-zU-wGw" customClass="HUDViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HUDVC" wantsFullScreenLayout="YES" id="Mwo-zU-wGw" customClass="HUDViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QNT-e2-yNW"/>
                         <viewControllerLayoutGuide type="bottom" id="6cZ-aZ-7cv"/>
