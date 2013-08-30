@@ -45,7 +45,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map.png" id="nZa-x6-Sri"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.png" id="nZa-x6-Sri">
+                        <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="2"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noU-jn-csS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,8 +147,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.png" width="33.757030487060547" height="25.505311965942383"/>
-        <image name="map.png" width="24" height="29.256093978881836"/>
+        <image name="camera.png" width="40" height="28"/>
+        <image name="map.png" width="37" height="36"/>
         <image name="project.png" width="23.254844665527344" height="27"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
