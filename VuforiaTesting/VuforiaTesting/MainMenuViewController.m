@@ -10,11 +10,14 @@
 #import "ProjectListViewController.h"
 #import "TutorialViewController.h"
 #import "AboutUsViewController.h"
+#import "TFirstViewController.h"
+#import "TutorialTabBarController.h"
 @interface MainMenuViewController ()
 
 @end
 
 @implementation MainMenuViewController
+@synthesize TTabBarController;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -72,8 +75,15 @@
     }
     else if ([cellText isEqualToString:@"Tutorial"])
     {
-        TutorialViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorialView"];
-        [self.navigationController pushViewController:controller animated:YES];
+       
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Tutorial" bundle:nil];
+        TutorialTabBarController*vc = [sb instantiateViewControllerWithIdentifier:@"TutorialTabBarView"];
+        
+        //[vc prepareProjectDetail:cellText];
+        [self.navigationController pushViewController:vc animated:NO];
+        
+       // TFirstViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TFirstView"];
+        //[self.navigationController pushViewController:vc animated:YES];
     }
     else if ([cellText isEqualToString:@"About Us"])
     {
