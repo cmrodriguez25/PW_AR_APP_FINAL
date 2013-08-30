@@ -23,7 +23,7 @@
     NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
     
     // Path to the project specific Resources Folder
-    resourcePath = [NSString stringWithFormat:@"%@/Projects/%@", resourcePath, projectName];
+    resourcePath = [NSString stringWithFormat:@"%@/Projects/%@", resourcePath, [projectName stringByReplacingOccurrencesOfString:@" " withString:@"_"]];
     
     // First, get list of all targets needed for this project. These will be used
     // by Vuforia to place models.

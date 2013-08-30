@@ -38,9 +38,14 @@
     resourcePath = [NSString stringWithFormat:@"%@/Projects", resourcePath];
     NSError *error;
     
-    NSArray *directoryContents = [[NSArray alloc]init];
-     directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:resourcePath error:&error];
+    NSMutableArray *directoryContents = [[NSMutableArray alloc]init];
+     directoryContents = (NSMutableArray *)[[NSFileManager defaultManager] contentsOfDirectoryAtPath:resourcePath error:&error];
 
+    for (int x = 0; x < directoryContents.count; x++) {
+        directoryContents[x] = [directoryContents[x] stringByReplacingOccurrencesOfString:@"_" withString:@" "];
+    
+    }
+    
     listOfProjects = [[NSMutableArray alloc]initWithArray:directoryContents];
     
     
