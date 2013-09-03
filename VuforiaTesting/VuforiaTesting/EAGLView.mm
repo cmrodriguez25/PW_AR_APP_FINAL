@@ -92,6 +92,16 @@ QCAR::Matrix44F modelViewMatrix;
                    });
 }
 
+- (void)moviePlaybackComplete:(NSNotification *)notification
+{
+    MPMoviePlayerController *moviePlayerController = [notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:moviePlayerController];
+    
+    [moviePlayerController.view removeFromSuperview];
+}
+
 // modify renderFrameQCAR here if you want a different 3D rendering model
 ////////////////////////////////////////////////////////////////////////////////
 // Draw the current frame using OpenGL
@@ -147,6 +157,7 @@ QCAR::Matrix44F modelViewMatrix;
         if(!foundTarget) {
             [self notifyDelegateTargetFound:[NSString stringWithUTF8String:trackable.getName()]];
             foundTarget = YES;
+            
         }
         
         // Choose the texture based on the target name

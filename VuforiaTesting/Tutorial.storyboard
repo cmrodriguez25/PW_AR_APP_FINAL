@@ -132,10 +132,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app_design_tutorial1.jpg" width="640" height="1103"/>
-        <image name="app_design_tutorial2.jpg" width="640" height="1103"/>
-        <image name="app_design_tutorial3.jpg" width="640" height="1103"/>
-        <image name="app_design_tutorial4.jpg" width="640" height="1103"/>
+        <image name="app_design_tutorial1.jpg" width="640" height="960"/>
+        <image name="app_design_tutorial2.jpg" width="640" height="960"/>
+        <image name="app_design_tutorial3.jpg" width="640" height="960"/>
+        <image name="app_design_tutorial4.jpg" width="640" height="960"/>
         <image name="circles.png" width="40" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
