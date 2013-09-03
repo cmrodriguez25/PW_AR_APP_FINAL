@@ -29,8 +29,30 @@
     [super viewDidLoad];
    // listOfProjects = [[NSMutableArray alloc]init];
     self.navigationItem.title = @"Projects";
-    //self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.translucent = YES;
+
+    
+   /* self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
+    const float colorMask[6] = {233, 255, 233, 255, 233, 255};
+    UIImage *img = [[UIImage alloc] init];
+    UIImage *maskedImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(img.CGImage, colorMask)];
+    
+    [self.navigationController.navigationBar setBackgroundImage:maskedImage forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
+    [img release];*/
+    
+    CGRect rect = self.navigationController.navigationBar.bounds;
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context,
+        [[UIColor colorWithRed:0./255 green:227./255 blue: 100./255 alpha:.5] CGColor]) ;
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+
+    UIGraphicsEndImageContext();
+    [img release];
+    
 	// Do any additional setup after loading the view.
      NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
     
