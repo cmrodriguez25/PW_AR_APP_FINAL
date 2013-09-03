@@ -8,6 +8,7 @@
 
 #import "ProjectListViewController.h"
 #import "ProjectDetailTabBarViewController.h"
+#import "ProjectViewController.h"
 
 @interface ProjectListViewController ()
 
@@ -122,12 +123,29 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *cellText = cell.textLabel.text;
-    
+   
+    if(indexPath.row ==2)
+    {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"ProjectDetail" bundle:nil];
      ProjectDetailTabBarViewController*vc = [sb instantiateViewControllerWithIdentifier:@"ProjectDetailView"];
     
     [vc prepareProjectDetail:cellText];
     [self.navigationController pushViewController:vc animated:NO];
+    
+    }
+    
+    
+    else  if(indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 3)
+    {
+        
+        
+        
+        ProjectViewController*vc = [self.storyboard instantiateViewControllerWithIdentifier:@"projectView"];
+        
+        //[vc prepareProjectDetail:cellText];
+        [self.navigationController pushViewController:vc animated:NO];
+    }
+
     
   
 

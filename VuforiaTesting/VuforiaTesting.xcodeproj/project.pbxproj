@@ -63,6 +63,7 @@
 		130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 130D898417ABE2D2005F9F63 /* TextureTeapotRed.png */; };
 		130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130D898817ABE2D2005F9F63 /* VuforiaTesting-Info.plist */; };
 		130FA5DE17D115A1005AA19D /* circles.png in Resources */ = {isa = PBXBuildFile; fileRef = 130FA5DD17D11550005AA19D /* circles.png */; };
+		13310D1417D6A41300CD8096 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13310D1317D6A41300CD8096 /* ProjectViewController.m */; };
 		134FC0A317B17D2B00788E95 /* ProjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A217B17D2B00788E95 /* ProjectListViewController.m */; };
 		134FC0A617B17D5D00788E95 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A517B17D5D00788E95 /* AboutUsViewController.m */; };
 		134FC0A917B17DA300788E95 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A817B17DA300788E95 /* TutorialViewController.m */; };
@@ -227,6 +228,8 @@
 		130D898817ABE2D2005F9F63 /* VuforiaTesting-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VuforiaTesting-Info.plist"; sourceTree = "<group>"; };
 		130D898917ABE2D2005F9F63 /* VuforiaTesting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VuforiaTesting-Prefix.pch"; sourceTree = "<group>"; };
 		130FA5DD17D11550005AA19D /* circles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circles.png; sourceTree = "<group>"; };
+		13310D1217D6A41300CD8096 /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
+		13310D1317D6A41300CD8096 /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
 		134FC0A117B17D2B00788E95 /* ProjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectListViewController.h; sourceTree = "<group>"; };
 		134FC0A217B17D2B00788E95 /* ProjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectListViewController.m; sourceTree = "<group>"; };
 		134FC0A417B17D5D00788E95 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 		128A9D5F17A8084F00B1298B = {
 			isa = PBXGroup;
 			children = (
+				13310D1217D6A41300CD8096 /* ProjectViewController.h */,
+				13310D1317D6A41300CD8096 /* ProjectViewController.m */,
 				13F6F49017D6849C005FBE88 /* image001.png */,
 				13F6F49217D6883E005FBE88 /* image001alpha.png */,
 				13F6F48E17D68434005FBE88 /* one-linelogolarge_blackblue.png */,
@@ -703,6 +708,7 @@
 				128A9E0517A972E400B1298B /* ARViewController.mm in Sources */,
 				1386C5F117D0D6ED00A9E4B6 /* TFirstViewController.m in Sources */,
 				130D89A517ABE2D2005F9F63 /* PWARViewController.m in Sources */,
+				13310D1417D6A41300CD8096 /* ProjectViewController.m in Sources */,
 				128A9E0217A96FED00B1298B /* OverlayViewController.mm in Sources */,
 				130D89A317ABE2D2005F9F63 /* main.m in Sources */,
 				134FC0A917B17DA300788E95 /* TutorialViewController.m in Sources */,

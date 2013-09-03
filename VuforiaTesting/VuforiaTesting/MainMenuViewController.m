@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    menuItems = [[NSMutableArray alloc]initWithObjects:@"Projects",@"Tutorial",@"About Us", @"???", nil];
+    menuItems = [[NSMutableArray alloc]initWithObjects:@"Projects",@"Tutorial",@"About Us", nil];
     //self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
     //self.navigationController.navigationBar.translucent = YES;
     
