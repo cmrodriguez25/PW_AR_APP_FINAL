@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		1218964017D61E7000B6CB05 /* PWNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218963F17D61E7000B6CB05 /* PWNavController.m */; };
 		1218964617D633D100B6CB05 /* heatgain_facade2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1218964517D633D100B6CB05 /* heatgain_facade2.jpg */; };
-		12369D6B17B2828D00DCC1DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12369D6617B27DB100DCC1DD /* Main.storyboard */; };
+		1218964917D673E000B6CB05 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1218964817D673E000B6CB05 /* MediaPlayer.framework */; };
+		1218964C17D6774500B6CB05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12369D6617B27DB100DCC1DD /* Main.storyboard */; };
+		1218964E17D6827E00B6CB05 /* isisvideo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1218964D17D681E400B6CB05 /* isisvideo.m4v */; };
 		12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
 		12369D7117B2997B00DCC1DD /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7017B2997B00DCC1DD /* Gear.png */; };
 		12369D7717B3D24E00DCC1DD /* Projects in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7617B3D24E00DCC1DD /* Projects */; };
@@ -101,6 +103,8 @@
 		1218963E17D61E7000B6CB05 /* PWNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWNavController.h; sourceTree = "<group>"; };
 		1218963F17D61E7000B6CB05 /* PWNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWNavController.m; sourceTree = "<group>"; };
 		1218964517D633D100B6CB05 /* heatgain_facade2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = heatgain_facade2.jpg; path = Assets/heatgain_facade2.jpg; sourceTree = "<group>"; };
+		1218964817D673E000B6CB05 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1218964D17D681E400B6CB05 /* isisvideo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = isisvideo.m4v; sourceTree = "<group>"; };
 		12369D6717B27DB100DCC1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12369D7017B2997B00DCC1DD /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
 		12369D7617B3D24E00DCC1DD /* Projects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Projects; path = Assets/Projects; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1218964917D673E000B6CB05 /* MediaPlayer.framework in Frameworks */,
 				1281CC1517D12487003C268A /* libQCAR.a in Frameworks */,
 				128A9DD817A85D2D00B1298B /* SystemConfiguration.framework in Frameworks */,
 				128A9D6E17A8084F00B1298B /* CoreGraphics.framework in Frameworks */,
@@ -323,6 +328,7 @@
 		128A9D6A17A8084F00B1298B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1218964817D673E000B6CB05 /* MediaPlayer.framework */,
 				13CA2AC017AAFF1E0056936D /* libQCAR.a */,
 				128A9DD717A85D2D00B1298B /* SystemConfiguration.framework */,
 				128A9DD517A85D1300B1298B /* CoreMotion.framework */,
@@ -486,6 +492,7 @@
 		130D897B17ABE2D2005F9F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1218964D17D681E400B6CB05 /* isisvideo.m4v */,
 				1218964517D633D100B6CB05 /* heatgain_facade2.jpg */,
 				1281CC1817D36E8D003C268A /* leaves.jpg */,
 				1281CC1617D36B77003C268A /* appIco.png */,
@@ -621,7 +628,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12369D6B17B2828D00DCC1DD /* Main.storyboard in Resources */,
+				1218964E17D6827E00B6CB05 /* isisvideo.m4v in Resources */,
+				1218964C17D6774500B6CB05 /* Main.storyboard in Resources */,
 				1386C5FB17D0E0A500A9E4B6 /* tutorial1.png in Resources */,
 				12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */,
 				12369D7717B3D24E00DCC1DD /* Projects in Resources */,

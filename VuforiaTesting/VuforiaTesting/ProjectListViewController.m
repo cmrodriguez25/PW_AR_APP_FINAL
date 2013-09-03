@@ -42,6 +42,7 @@
     [[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
     [img release];*/
     
+
     CGRect rect = self.navigationController.navigationBar.bounds;
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();

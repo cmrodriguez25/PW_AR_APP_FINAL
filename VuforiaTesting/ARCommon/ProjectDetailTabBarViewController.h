@@ -17,5 +17,5 @@
 }
 
 -(void)prepareProjectDetail: (NSString *)projectName;
-
+-(void)playVideo:(NSURL *)url;
 @end

@@ -9,14 +9,25 @@
 #import "PWParentViewController.h"
 #import "PWARViewController.h"
 #import "QCARutils.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import "ProjectDetailTabBarViewController.h"
 
 extern bool isInterfaceOrientationPortrait;
 @implementation PWParentViewController
+bool videoPlayed = false;
+
 
 -(void)targetFound:(NSString *)target
 {
     if([_overlayDict objectForKey:target] != nil) {
         [HUDVC showOverlay:[_overlayDict objectForKey:target]];
+    }
+    
+    if([target isEqualToString:@"Stair1Floor"]) {
+        ProjectDetailTabBarViewController *pvc = (ProjectDetailTabBarViewController*)self.parentViewController;
+        
+        NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"isisvideo" ofType:@"m4v"];
+        [pvc playVideo:[NSURL fileURLWithPath:filepath]];
     }
     
     [HUDVC displayText:target];

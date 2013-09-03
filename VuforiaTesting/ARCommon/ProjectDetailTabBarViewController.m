@@ -9,6 +9,7 @@
 #import "ProjectDetailTabBarViewController.h"
 #import "QCARutils.h"
 #import "PWParentViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @implementation ProjectDetailTabBarViewController
 
@@ -17,6 +18,7 @@
     _projectName = projectName;
     
     self.title = _projectName;
+    
     QCARutils *qUtils = [QCARutils getInstance];
     
     // Path to iPhone App Resources Folder
@@ -101,15 +103,54 @@
         [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
     }
     
-    self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
-    const float colorMask[6] = {233, 255, 233, 255, 233, 255};
-    UIImage *img = [[UIImage alloc] init];
-    UIImage *maskedImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(img.CGImage, colorMask)];
     
-    [self.navigationController.navigationBar setBackgroundImage:maskedImage forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
-    [img release];
+    self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
+    CGRect rect = self.navigationController.navigationBar.bounds;
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context,
+                                   [[UIColor colorWithRed:122./255 green:122./255 blue: 122./255 alpha:.7] CGColor]) ;
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+    
+    UIGraphicsEndImageContext();
+    
+
 	// Do any additional setup after loading the view.
+
+}
+
+- (void)moviePlaybackComplete:(NSNotification *)notification
+{
+    MPMoviePlayerController *moviePlayerController = [notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:moviePlayerController];
+    
+    [moviePlayerController.view removeFromSuperview];
+    self.selectedViewController = self.viewControllers[2];
+}
+
+
+-(void)playVideo:(NSURL *)url {
+    self.selectedViewController = self.viewControllers[1];
+    MPMoviePlayerController *moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlaybackComplete:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:moviePlayerController];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlaybackComplete:)
+                                                 name:MPMoviePlayerDidExitFullscreenNotification
+                                               object:moviePlayerController];
+    
+    [moviePlayerController.view setFrame:[self.view bounds]];
+    [self.view addSubview:moviePlayerController.view];
+    moviePlayerController.fullscreen = YES;
+    [moviePlayerController play];
 
 }
 
