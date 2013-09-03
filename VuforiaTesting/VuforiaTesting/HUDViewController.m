@@ -11,9 +11,10 @@
 
 bool isInterfaceOrientationPortrait=false;
 @implementation HUDViewController
-@synthesize details;
 @synthesize overlayView;
+@synthesize infoButton;
 
+NSString *details;
 
 - (void) showOverlay:(NSString *)overlayFilePath {
     UIImage *img = [UIImage imageWithContentsOfFile:overlayFilePath];
@@ -24,15 +25,16 @@ bool isInterfaceOrientationPortrait=false;
     overlayView.image = nil;
 }
 
+-(IBAction)clickInfoButton:(id)sender {
+    detailsView.hidden = !detailsView.hidden;
+}
+
 - (void) displayText:(NSString *)message
 {
     @try {
-        if([message isEqual: @"stones"]) {
+        if([message isEqual: @"Diesel"]) {
             //[details setText:@"This is a yellow teapot."];
-            details.text = @"This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. This is a yellow teapot. ";
-        } else {
-            //[details setText:@"This is a grey teapot."];
-            details.text = @"This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. This is a grey teapot. ";
+            detailsView.text = @"THE SOUTH FACADE OF AHC-4 WAS DESIGNED TO PROTECT THE OFFICES FROM SOLAR HEAT GAIN. \n\nEACH WINDOW IS TILTED IN RESPONSE TO A HEAT STUDY DIAGRAM THAT WAS GENERATED FOR THE SOUTH FACADE OF THE BUILDING.";
         }
     }
     @catch (NSException * e) {
