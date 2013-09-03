@@ -72,7 +72,15 @@
     imgView = (UIImageView *)[viewController.view viewWithTag:100];
     imgView.image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", projectImage, directoryContents[0]]];
     
-    [(PWParentViewController *)self.viewControllers[2] initWithModelDict:_modelDict];
+    //Load overlays
+    NSString *overlayPath = [NSString stringWithFormat:@"%@/Overlays", resourcePath];
+    directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:overlayPath error:&error];
+    _availableOverlays = [[NSMutableDictionary alloc] init];
+    for(NSString *item in directoryContents) {
+        [_availableOverlays setObject:[NSString stringWithFormat:@"%@/%@", overlayPath, item] forKey:[item stringByDeletingPathExtension]];
+    }
+    
+    [(PWParentViewController *)self.viewControllers[2] initWithModelDict:_modelDict andOverlays:_availableOverlays];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

@@ -146,6 +146,7 @@
                     </view>
                     <connections>
                         <outlet property="details" destination="Eb0-Yj-rQa" id="Q7D-mg-bXt"/>
+                        <outlet property="overlayView" destination="zpx-ma-awC" id="xR7-Mh-WB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COT-Cp-KR9" userLabel="First Responder" sceneMemberID="firstResponder"/>

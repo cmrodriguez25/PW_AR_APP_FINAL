@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1218964017D61E7000B6CB05 /* PWNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218963F17D61E7000B6CB05 /* PWNavController.m */; };
-		1218964217D62F3F00B6CB05 /* hallway_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1218964117D62F3F00B6CB05 /* hallway_overlay.png */; };
 		1218964617D633D100B6CB05 /* heatgain_facade2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1218964517D633D100B6CB05 /* heatgain_facade2.jpg */; };
 		12369D6B17B2828D00DCC1DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12369D6617B27DB100DCC1DD /* Main.storyboard */; };
 		12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
@@ -98,7 +97,6 @@
 /* Begin PBXFileReference section */
 		1218963E17D61E7000B6CB05 /* PWNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWNavController.h; sourceTree = "<group>"; };
 		1218963F17D61E7000B6CB05 /* PWNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWNavController.m; sourceTree = "<group>"; };
-		1218964117D62F3F00B6CB05 /* hallway_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hallway_overlay.png; sourceTree = "<group>"; };
 		1218964517D633D100B6CB05 /* heatgain_facade2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = heatgain_facade2.jpg; path = Assets/heatgain_facade2.jpg; sourceTree = "<group>"; };
 		12369D6717B27DB100DCC1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12369D7017B2997B00DCC1DD /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
@@ -480,7 +478,6 @@
 			isa = PBXGroup;
 			children = (
 				1218964517D633D100B6CB05 /* heatgain_facade2.jpg */,
-				1218964117D62F3F00B6CB05 /* hallway_overlay.png */,
 				1281CC1817D36E8D003C268A /* leaves.jpg */,
 				1281CC1617D36B77003C268A /* appIco.png */,
 				12369D7617B3D24E00DCC1DD /* Projects */,
@@ -637,7 +634,6 @@
 				1281CC1717D36B77003C268A /* appIco.png in Resources */,
 				130D89A717ABE2D2005F9F63 /* about.html in Resources */,
 				130D89AB17ABE2D2005F9F63 /* Tarmac.xml in Resources */,
-				1218964217D62F3F00B6CB05 /* hallway_overlay.png in Resources */,
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
 				130D89A917ABE2D2005F9F63 /* StonesAndChips.xml in Resources */,
 				13D12AEA17D6598E00E8B83A /* app_design_tutorial2.jpg in Resources */,

@@ -35,6 +35,10 @@
     [self.targetFoundDelegate targetFound:target];
 }
 
+-(void) targetLost {
+    [self.targetFoundDelegate targetLost];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

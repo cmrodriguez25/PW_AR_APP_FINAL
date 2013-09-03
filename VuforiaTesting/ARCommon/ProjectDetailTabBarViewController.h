@@ -13,6 +13,7 @@
     @private
     NSString *_projectName;
     NSMutableDictionary *_modelDict;
+    NSMutableDictionary *_availableOverlays;
 }
 
 -(void)prepareProjectDetail: (NSString *)projectName;

@@ -10,4 +10,5 @@
 
 @protocol ARTargetFoundDelegate <NSObject>
     - (void)targetFound:(NSString *)target;
+    - (void)targetLost;
 @end

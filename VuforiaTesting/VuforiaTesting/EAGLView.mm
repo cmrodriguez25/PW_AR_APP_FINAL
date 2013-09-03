@@ -84,6 +84,14 @@ QCAR::Matrix44F modelViewMatrix;
                    });
 }
 
+- (void) notifyDelegateTargetLost
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^{
+                       [self.targetFoundDelegate targetLost];
+                   });
+}
+
 // modify renderFrameQCAR here if you want a different 3D rendering model
 ////////////////////////////////////////////////////////////////////////////////
 // Draw the current frame using OpenGL
@@ -169,14 +177,10 @@ QCAR::Matrix44F modelViewMatrix;
             
             NSMutableDictionary *instanceModelDict = [self.modelDict objectForKey:targetName];
             
-            //glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)obj3D.texCoords);
             glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)[instanceModelDict objectForKey:@"TexCoords"]);
             
-            //glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
             glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)[instanceModelDict objectForKey:@"Verts"]);
             
-                            
-            //glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
             glNormalPointer(GL_FLOAT, 0, (const GLvoid*)[instanceModelDict objectForKey:@"Normals"]);
             
             glDrawArrays(GL_TRIANGLES, 0, (int)[instanceModelDict objectForKey:@"NumVerts"]);
@@ -188,8 +192,6 @@ QCAR::Matrix44F modelViewMatrix;
             QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(result->getPose());
             
             // OpenGL 2
-            QCAR::Matrix44F qmat = qUtils.projectionMatrix;
-            
             if(refresh) {
                 ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale + 50, &modelViewMatrix.data[0]);
                 ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
@@ -199,8 +201,6 @@ QCAR::Matrix44F modelViewMatrix;
             
             glUseProgram(shaderProgramID);
             
-            
-            //glVertexAttribPointer(vertexHandle, 3, GL_FLOAT, GL_FALSE)
             NSArray *verts = (NSArray *)[instanceModelDict objectForKey:@"Verts"];
             float *vertsArray = (float *)malloc([verts count] * sizeof(float));
 
@@ -254,6 +254,9 @@ QCAR::Matrix44F modelViewMatrix;
         }
 #endif
     } else {
+        if(foundTarget) {
+            [self notifyDelegateTargetLost];
+        }
         foundTarget = NO;
     }
     
