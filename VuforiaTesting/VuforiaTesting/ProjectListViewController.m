@@ -29,6 +29,8 @@
     [super viewDidLoad];
    // listOfProjects = [[NSMutableArray alloc]init];
     self.navigationItem.title = @"Projects";
+    
+    
 
     
    /* self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
@@ -85,11 +87,14 @@
 
 #pragma TABLE VIEW METHODS
 
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [listOfProjects count];
     
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);
     return 1;
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{

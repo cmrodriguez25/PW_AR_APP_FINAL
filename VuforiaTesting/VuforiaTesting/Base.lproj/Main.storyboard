@@ -55,8 +55,42 @@
                     <view key="view" contentMode="scaleToFill" id="bNE-zc-dfV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leaves.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5WJ-MV-bd2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-mN-3mb">
+                                <rect key="frame" x="30" y="118" width="267" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77697613603930504" green="1" blue="0.59182172550676659" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">The content and image of this app was ideated by Isis Fumero, Alejandro Branger and Silvana Herrera with the help of a research grant by Perkins+Will through its Innovation Incubator program. This program aims to foster an invigorating culture of innovation by supporting small, focused research projects through micro-grants of money and time.                                     The purpose of this mobile app is to augment our understanding of the underlying facts and benefits of sustainable design ideas in the built environment and showcase the convergence of design, technology and research that creates places that improve how we live and work.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teX-aL-52B">
+                                <rect key="frame" x="31" y="381" width="266" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77697613600000004" green="1" blue="0.59182172550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Michell Consulting Group is headquartered in Miami, Florida. We specialize in developing, implementing, integrating, and maintaining advanced technologies for our clients in order to achieve maximum return on investment. We are committed to our clients and employees. Our clients trust us with integral parts of their business, and we deliver. We have developed lasting relationships with our clients because we are by their side long after the initial implementation is complete.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="one-linelogolarge_blackblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="lnI-4z-W8s">
+                                <rect key="frame" x="31" y="46" width="265" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image001alpha.png" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-jk-8SN">
+                                <rect key="frame" x="31" y="300" width="266" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="michell" destination="teX-aL-52B" id="oI3-2f-sAZ"/>
+                        <outlet property="perkins" destination="b8Z-mN-3mb" id="2Se-SE-nhT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7G-Yu-e7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QvK-N6-EOR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="587"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -184,6 +218,11 @@
             <point key="canvasLocation" x="873" y="237"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image001alpha.png" width="205" height="43"/>
+        <image name="leaves.jpg" width="1600" height="1200"/>
+        <image name="one-linelogolarge_blackblue.png" width="451" height="31.441049575805664"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
