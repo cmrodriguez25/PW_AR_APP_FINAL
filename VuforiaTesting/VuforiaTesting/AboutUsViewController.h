@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AboutUsViewController : UIViewController
+@property (retain, nonatomic) IBOutlet UITextView *perkins;
+@property (retain, nonatomic) IBOutlet UITextView *michell;
 
 @end

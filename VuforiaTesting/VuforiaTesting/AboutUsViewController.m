@@ -13,6 +13,8 @@
 @end
 
 @implementation AboutUsViewController
+@synthesize perkins, michell;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +29,11 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"About Us";
+    perkins.layer.borderWidth = 5.0f;
+    perkins.layer.borderColor = [[UIColor greenColor] CGColor];
+    
+    michell.layer.borderWidth = 5.0f;
+    michell.layer.borderColor = [[UIColor greenColor] CGColor];
 	// Do any additional setup after loading the view.
 }
 
@@ -36,4 +43,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [perkins release];
+    [michell release];
+    [super dealloc];
+}
 @end

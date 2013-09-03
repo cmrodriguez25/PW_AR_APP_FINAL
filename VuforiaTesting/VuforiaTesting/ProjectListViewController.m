@@ -30,6 +30,18 @@
    // listOfProjects = [[NSMutableArray alloc]init];
     self.navigationItem.title = @"Projects";
     
+    
+
+    
+   /* self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
+    const float colorMask[6] = {233, 255, 233, 255, 233, 255};
+    UIImage *img = [[UIImage alloc] init];
+    UIImage *maskedImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(img.CGImage, colorMask)];
+    
+    [self.navigationController.navigationBar setBackgroundImage:maskedImage forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
+    [img release];*/
+    
 
     CGRect rect = self.navigationController.navigationBar.bounds;
     UIGraphicsBeginImageContext(rect.size);
@@ -76,11 +88,14 @@
 
 #pragma TABLE VIEW METHODS
 
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [listOfProjects count];
     
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);
     return 1;
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
