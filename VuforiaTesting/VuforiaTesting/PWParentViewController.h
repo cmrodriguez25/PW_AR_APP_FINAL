@@ -14,7 +14,8 @@
     HUDViewController* HUDVC;
     UIWindow* window;
     NSMutableDictionary* _modelDict;
+    NSMutableDictionary *_overlayDict;
 }
 
--(id)initWithModelDict:(NSMutableDictionary *)modelDict;
+-(id)initWithModelDict:(NSMutableDictionary *)modelDict andOverlays:(NSMutableDictionary *)overlayDict;
 @end

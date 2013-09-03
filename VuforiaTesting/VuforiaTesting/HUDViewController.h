@@ -12,9 +12,12 @@
 
 @interface HUDViewController : UIViewController {
     IBOutlet UITextView *details;
+    IBOutlet UIImageView *overlayView;
 }
 
 @property (nonatomic, retain) IBOutlet UITextView *details;
-
+@property (nonatomic, retain) IBOutlet UIImageView *overlayView;
+-(void) showOverlay:(NSString *)path;
 -(void) displayText:(NSString *)message;
+-(void) hideOverlay;
 @end

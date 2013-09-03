@@ -33,8 +33,16 @@
 {
     [super viewDidLoad];
     menuItems = [[NSMutableArray alloc]initWithObjects:@"Projects",@"Tutorial",@"About Us", @"???", nil];
-    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
-    self.navigationController.navigationBar.translucent = YES;
+    //self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
+    //self.navigationController.navigationBar.translucent = YES;
+    
+    self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
+    const float colorMask[6] = {150, 255, 150, 255, 150, 255};
+    UIImage *img = [[UIImage alloc] init];
+    UIImage *maskedImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(img.CGImage, colorMask)];
+    
+    [self.navigationController.navigationBar setBackgroundImage:maskedImage forBarMetrics:UIBarMetricsDefault];
+    [img release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,22 +53,20 @@
 #pragma TABLE VIEW METHODS
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leaves.png"]];
-
     static NSString *identifier = @"cell";
 
-    UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
+        UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
     
     
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         tableView.backgroundView =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leaves.jpg"]];
-        //cell.backgroundView = tempImageView;
-        [tempImageView setFrame:cell.frame];
-        [tempImageView release];
+    
         cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.backgroundColor = [UIColor clearColor];
-    
+        UIView *selectionColor = [[UIView alloc] init];
+        selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.3];
+        cell.selectedBackgroundView = selectionColor;
         cell.opaque = NO;
 
     return cell;
@@ -71,6 +77,7 @@
 
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelected:NO];
     NSString *cellText = cell.textLabel.text;
     
     

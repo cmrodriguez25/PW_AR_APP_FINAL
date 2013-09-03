@@ -12,6 +12,7 @@
 
 @interface PWARViewController : ARViewController <ARTargetFoundDelegate> {
     NSMutableDictionary* _modelDict;
+    
 }
 
 @property (nonatomic, retain) id <ARTargetFoundDelegate> targetFoundDelegate;

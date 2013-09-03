@@ -12,6 +12,17 @@
 bool isInterfaceOrientationPortrait=false;
 @implementation HUDViewController
 @synthesize details;
+@synthesize overlayView;
+
+
+- (void) showOverlay:(NSString *)overlayFilePath {
+    UIImage *img = [UIImage imageWithContentsOfFile:overlayFilePath];
+    overlayView.image = img;
+}
+
+-(void) hideOverlay {
+    overlayView.image = nil;
+}
 
 - (void) displayText:(NSString *)message
 {

@@ -15,14 +15,23 @@ extern bool isInterfaceOrientationPortrait;
 
 -(void)targetFound:(NSString *)target
 {
+    if([_overlayDict objectForKey:target] != nil) {
+        [HUDVC showOverlay:[_overlayDict objectForKey:target]];
+    }
+    
     [HUDVC displayText:target];
 }
 
--(id)initWithModelDict:(NSMutableDictionary *)modelDict
+-(void)targetLost {
+    [HUDVC hideOverlay];
+}
+
+-(id)initWithModelDict:(NSMutableDictionary *)modelDict andOverlays:(NSMutableDictionary *)overlayDict
 {
     self = [super init];
     if (self) {
         _modelDict = modelDict;
+        _overlayDict = overlayDict;
     }
     
     return self;
