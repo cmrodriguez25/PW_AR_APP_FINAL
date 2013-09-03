@@ -60,7 +60,6 @@
 		130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */ = {isa = PBXBuildFile; fileRef = 130D898317ABE2D2005F9F63 /* TextureTeapotBrass.png */; };
 		130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 130D898417ABE2D2005F9F63 /* TextureTeapotRed.png */; };
 		130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130D898817ABE2D2005F9F63 /* VuforiaTesting-Info.plist */; };
-		130FA5D917D11238005AA19D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 130FA5D817D11238005AA19D /* Default-568h@2x.png */; };
 		130FA5DE17D115A1005AA19D /* circles.png in Resources */ = {isa = PBXBuildFile; fileRef = 130FA5DD17D11550005AA19D /* circles.png */; };
 		134FC0A317B17D2B00788E95 /* ProjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A217B17D2B00788E95 /* ProjectListViewController.m */; };
 		134FC0A617B17D5D00788E95 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FC0A517B17D5D00788E95 /* AboutUsViewController.m */; };
@@ -77,6 +76,13 @@
 		1386C60117D0E27300A9E4B6 /* TutorialTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1386C60017D0E27300A9E4B6 /* TutorialTabBarController.m */; };
 		13B8404517AC561E00174CED /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A9DF117A96F8000B1298B /* OverlayView.m */; };
 		13B8404617AC561E00174CED /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 128A9DF517A96F8000B1298B /* QCARutils.mm */; };
+		13D12AE017D657F900E8B83A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D12ADF17D657F900E8B83A /* Default-568h@2x.png */; };
+		13D12AE317D6589500E8B83A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D12AE117D6589500E8B83A /* Default@2x.png */; };
+		13D12AE417D6589500E8B83A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D12AE217D6589500E8B83A /* Default.png */; };
+		13D12AE917D6598E00E8B83A /* app_design_tutorial1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13D12AE517D6598E00E8B83A /* app_design_tutorial1.jpg */; };
+		13D12AEA17D6598E00E8B83A /* app_design_tutorial2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13D12AE617D6598E00E8B83A /* app_design_tutorial2.jpg */; };
+		13D12AEB17D6598E00E8B83A /* app_design_tutorial3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13D12AE717D6598E00E8B83A /* app_design_tutorial3.jpg */; };
+		13D12AEC17D6598E00E8B83A /* app_design_tutorial4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13D12AE817D6598E00E8B83A /* app_design_tutorial4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,7 +219,6 @@
 		130D898717ABE2D2005F9F63 /* Texture2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Texture2D.m; sourceTree = "<group>"; };
 		130D898817ABE2D2005F9F63 /* VuforiaTesting-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VuforiaTesting-Info.plist"; sourceTree = "<group>"; };
 		130D898917ABE2D2005F9F63 /* VuforiaTesting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VuforiaTesting-Prefix.pch"; sourceTree = "<group>"; };
-		130FA5D817D11238005AA19D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		130FA5DD17D11550005AA19D /* circles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circles.png; sourceTree = "<group>"; };
 		134FC0A117B17D2B00788E95 /* ProjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectListViewController.h; sourceTree = "<group>"; };
 		134FC0A217B17D2B00788E95 /* ProjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectListViewController.m; sourceTree = "<group>"; };
@@ -237,6 +242,13 @@
 		1386C5FF17D0E27300A9E4B6 /* TutorialTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialTabBarController.h; sourceTree = "<group>"; };
 		1386C60017D0E27300A9E4B6 /* TutorialTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialTabBarController.m; sourceTree = "<group>"; };
 		13CA2AC017AAFF1E0056936D /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = ../libQCAR.a; sourceTree = "<group>"; };
+		13D12ADF17D657F900E8B83A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		13D12AE117D6589500E8B83A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		13D12AE217D6589500E8B83A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		13D12AE517D6598E00E8B83A /* app_design_tutorial1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_design_tutorial1.jpg; sourceTree = "<group>"; };
+		13D12AE617D6598E00E8B83A /* app_design_tutorial2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_design_tutorial2.jpg; sourceTree = "<group>"; };
+		13D12AE717D6598E00E8B83A /* app_design_tutorial3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_design_tutorial3.jpg; sourceTree = "<group>"; };
+		13D12AE817D6598E00E8B83A /* app_design_tutorial4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_design_tutorial4.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,8 +287,14 @@
 		128A9D5F17A8084F00B1298B = {
 			isa = PBXGroup;
 			children = (
+				13D12AE517D6598E00E8B83A /* app_design_tutorial1.jpg */,
+				13D12AE617D6598E00E8B83A /* app_design_tutorial2.jpg */,
+				13D12AE717D6598E00E8B83A /* app_design_tutorial3.jpg */,
+				13D12AE817D6598E00E8B83A /* app_design_tutorial4.jpg */,
+				13D12AE117D6589500E8B83A /* Default@2x.png */,
+				13D12AE217D6589500E8B83A /* Default.png */,
+				13D12ADF17D657F900E8B83A /* Default-568h@2x.png */,
 				130FA5DD17D11550005AA19D /* circles.png */,
-				130FA5D817D11238005AA19D /* Default-568h@2x.png */,
 				1386C5EA17D0D40B00A9E4B6 /* TutorialFiles */,
 				130D892317ABE2D2005F9F63 /* VuforiaTesting */,
 				13CA2AC217AB02100056936D /* Storyboard */,
@@ -601,13 +619,18 @@
 				1386C5FB17D0E0A500A9E4B6 /* tutorial1.png in Resources */,
 				12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */,
 				12369D7717B3D24E00DCC1DD /* Projects in Resources */,
+				13D12AE417D6589500E8B83A /* Default.png in Resources */,
+				13D12AE917D6598E00E8B83A /* app_design_tutorial1.jpg in Resources */,
 				12A4F4F217B1440900F7930E /* camera.png in Resources */,
 				1386C5FD17D0E0AD00A9E4B6 /* tutorial3.png in Resources */,
+				13D12AE017D657F900E8B83A /* Default-568h@2x.png in Resources */,
 				12A4F4F317B1440900F7930E /* map.png in Resources */,
 				12A4F4F417B1440900F7930E /* project.png in Resources */,
+				13D12AEB17D6598E00E8B83A /* app_design_tutorial3.jpg in Resources */,
 				130D89AA17ABE2D2005F9F63 /* Tarmac.dat in Resources */,
 				1281CC1917D36E8D003C268A /* leaves.jpg in Resources */,
 				130D89AC17ABE2D2005F9F63 /* TextureTeapotBlue.png in Resources */,
+				13D12AE317D6589500E8B83A /* Default@2x.png in Resources */,
 				12369D7117B2997B00DCC1DD /* Gear.png in Resources */,
 				130D89A017ABE2D2005F9F63 /* InfoPlist.strings in Resources */,
 				130D89A217ABE2D2005F9F63 /* Images.xcassets in Resources */,
@@ -617,6 +640,7 @@
 				1218964217D62F3F00B6CB05 /* hallway_overlay.png in Resources */,
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
 				130D89A917ABE2D2005F9F63 /* StonesAndChips.xml in Resources */,
+				13D12AEA17D6598E00E8B83A /* app_design_tutorial2.jpg in Resources */,
 				1354CB5917B3D9DA003DAFF7 /* Tutorial.storyboard in Resources */,
 				1218964617D633D100B6CB05 /* heatgain_facade2.jpg in Resources */,
 				130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */,
@@ -624,8 +648,8 @@
 				130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */,
 				1386C5FE17D0E0B000A9E4B6 /* tutorial4.png in Resources */,
 				130D89A817ABE2D2005F9F63 /* StonesAndChips.dat in Resources */,
-				130FA5D917D11238005AA19D /* Default-568h@2x.png in Resources */,
 				130FA5DE17D115A1005AA19D /* circles.png in Resources */,
+				13D12AEC17D6598E00E8B83A /* app_design_tutorial4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
