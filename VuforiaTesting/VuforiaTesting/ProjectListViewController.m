@@ -51,7 +51,6 @@
     [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
 
     UIGraphicsEndImageContext();
-    [img release];
     
 	// Do any additional setup after loading the view.
      NSString *resourcePath = [[NSBundle mainBundle] resourcePath];

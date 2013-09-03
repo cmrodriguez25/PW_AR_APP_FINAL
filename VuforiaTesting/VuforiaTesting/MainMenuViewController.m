@@ -48,7 +48,6 @@
     [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
     
     UIGraphicsEndImageContext();
-    [img release];
 }
 
 - (void)didReceiveMemoryWarning
