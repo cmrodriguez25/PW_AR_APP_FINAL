@@ -101,15 +101,20 @@
         [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
     }
     
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
+    const float colorMask[6] = {233, 255, 233, 255, 233, 255};
+    UIImage *img = [[UIImage alloc] init];
+    UIImage *maskedImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(img.CGImage, colorMask)];
+    
+    [self.navigationController.navigationBar setBackgroundImage:maskedImage forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
+    [img release];
 	// Do any additional setup after loading the view.
 
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-    self.navigationController.navigationBar.translucent = NO;
+
 }
 
 - (void)didReceiveMemoryWarning
