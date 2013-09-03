@@ -33,9 +33,7 @@
 {
     [super viewDidLoad];
     menuItems = [[NSMutableArray alloc]initWithObjects:@"Projects",@"Tutorial",@"About Us", @"???", nil];
-	
-    
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
     self.navigationController.navigationBar.translucent = YES;
 }
 
@@ -46,23 +44,31 @@
 }
 #pragma TABLE VIEW METHODS
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leaves.png"]];
+
     static NSString *identifier = @"cell";
 
     UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
     
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-
-    cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        tableView.backgroundView =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leaves.jpg"]];
+        //cell.backgroundView = tempImageView;
+        [tempImageView setFrame:cell.frame];
+        [tempImageView release];
+        cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.backgroundColor = [UIColor clearColor];
     
+        cell.opaque = NO;
+
     return cell;
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath    {
-    
-    
+
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *cellText = cell.textLabel.text;

@@ -12,17 +12,19 @@
 #import <QCAR/Renderer.h>
 #import <QCAR/VideoBackgroundConfig.h>
 #import "QCARutils.h"
+#include <iostream>
+
 
 #ifndef USE_OPENGL1
 #import "ShaderUtils.h"
 #endif
 
+using namespace std;
+
 namespace {
     // Teapot texture filenames
     const char* textureFilenames[] = {
-        "Gear.png",
-        "TextureTeapotBlue.png",
-        "TextureTeapotRed.png"
+        "heatgain_facade2.jpg",
     };
     
     // Model scale factor
@@ -33,8 +35,15 @@ namespace {
 @implementation EAGLView
 
 @synthesize modelDict = _modelDict;
+long refreshRate = 4;
+
+QCAR::Matrix44F modelViewProjection;
 
 bool foundTarget = NO;
+long timer = 0;
+bool refresh = true;
+
+QCAR::Matrix44F modelViewMatrix;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -117,10 +126,15 @@ bool foundTarget = NO;
     
     glDisable(GL_CULL_FACE);
     if(state.getNumTrackableResults() > 0) {
+        timer++;
         // Get the trackable
         const QCAR::TrackableResult* result = state.getTrackableResult(0);
         const QCAR::Trackable& trackable = result->getTrackable();
-        QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(result->getPose());
+        
+        if(timer > refreshRate || !foundTarget) {
+            refresh = true;
+            timer = 0;
+        } else timer++;
         
         if(!foundTarget) {
             [self notifyDelegateTargetFound:[NSString stringWithUTF8String:trackable.getName()]];
@@ -171,14 +185,17 @@ bool foundTarget = NO;
         else {
             
             NSMutableDictionary *instanceModelDict = [self.modelDict objectForKey:targetName];
-
+            QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(result->getPose());
+            
             // OpenGL 2
-            QCAR::Matrix44F modelViewProjection;
+            QCAR::Matrix44F qmat = qUtils.projectionMatrix;
             
-            
-            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale + 50, &modelViewMatrix.data[0]);
-            ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
-            ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
+            if(refresh) {
+                ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale + 50, &modelViewMatrix.data[0]);
+                ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
+                ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
+                refresh = NO;
+            }
             
             glUseProgram(shaderProgramID);
             

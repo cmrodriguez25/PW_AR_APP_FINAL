@@ -29,7 +29,7 @@
     [super viewDidLoad];
    // listOfProjects = [[NSMutableArray alloc]init];
     self.navigationItem.title = @"Projects";
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    //self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.translucent = YES;
 	// Do any additional setup after loading the view.
      NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
@@ -82,16 +82,11 @@
     
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    
     cell.textLabel.text = [listOfProjects objectAtIndex:indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
-    
-    
-    
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *cellText = cell.textLabel.text;
     

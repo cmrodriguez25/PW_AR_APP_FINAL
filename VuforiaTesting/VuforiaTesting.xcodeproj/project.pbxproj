@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1218964017D61E7000B6CB05 /* PWNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218963F17D61E7000B6CB05 /* PWNavController.m */; };
+		1218964217D62F3F00B6CB05 /* hallway_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1218964117D62F3F00B6CB05 /* hallway_overlay.png */; };
+		1218964617D633D100B6CB05 /* heatgain_facade2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1218964517D633D100B6CB05 /* heatgain_facade2.jpg */; };
 		12369D6B17B2828D00DCC1DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12369D6617B27DB100DCC1DD /* Main.storyboard */; };
 		12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
 		12369D7117B2997B00DCC1DD /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7017B2997B00DCC1DD /* Gear.png */; };
 		12369D7717B3D24E00DCC1DD /* Projects in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7617B3D24E00DCC1DD /* Projects */; };
 		123BEEB517ADAD8B007393CA /* ProjectDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */; };
 		1281CC1517D12487003C268A /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CA2AC017AAFF1E0056936D /* libQCAR.a */; };
+		1281CC1717D36B77003C268A /* appIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 1281CC1617D36B77003C268A /* appIco.png */; };
+		1281CC1917D36E8D003C268A /* leaves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1281CC1817D36E8D003C268A /* leaves.jpg */; };
 		128A9D6C17A8084F00B1298B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6B17A8084F00B1298B /* Foundation.framework */; };
 		128A9D6E17A8084F00B1298B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6D17A8084F00B1298B /* CoreGraphics.framework */; };
 		128A9D7017A8084F00B1298B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6F17A8084F00B1298B /* UIKit.framework */; };
@@ -85,12 +90,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1218963E17D61E7000B6CB05 /* PWNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWNavController.h; sourceTree = "<group>"; };
+		1218963F17D61E7000B6CB05 /* PWNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWNavController.m; sourceTree = "<group>"; };
+		1218964117D62F3F00B6CB05 /* hallway_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hallway_overlay.png; sourceTree = "<group>"; };
+		1218964517D633D100B6CB05 /* heatgain_facade2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = heatgain_facade2.jpg; path = Assets/heatgain_facade2.jpg; sourceTree = "<group>"; };
 		12369D6717B27DB100DCC1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12369D7017B2997B00DCC1DD /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
 		12369D7617B3D24E00DCC1DD /* Projects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Projects; path = Assets/Projects; sourceTree = "<group>"; };
 		123BEEB317ADAD8B007393CA /* ProjectDetailTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectDetailTabBarViewController.h; path = ../ARCommon/ProjectDetailTabBarViewController.h; sourceTree = "<group>"; };
 		123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectDetailTabBarViewController.m; path = ../ARCommon/ProjectDetailTabBarViewController.m; sourceTree = "<group>"; };
 		125D302C17AC175F00AC67CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/ProjectDetail.storyboard; sourceTree = "<group>"; };
+		1281CC1617D36B77003C268A /* appIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIco.png; sourceTree = "<group>"; };
+		1281CC1817D36E8D003C268A /* leaves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leaves.jpg; sourceTree = "<group>"; };
 		128A9D6817A8084F00B1298B /* VuforiaTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VuforiaTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128A9D6B17A8084F00B1298B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		128A9D6D17A8084F00B1298B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -441,6 +452,8 @@
 				134FC0A517B17D5D00788E95 /* AboutUsViewController.m */,
 				134FC0A717B17DA300788E95 /* TutorialViewController.h */,
 				134FC0A817B17DA300788E95 /* TutorialViewController.m */,
+				1218963E17D61E7000B6CB05 /* PWNavController.h */,
+				1218963F17D61E7000B6CB05 /* PWNavController.m */,
 			);
 			path = VuforiaTesting;
 			sourceTree = "<group>";
@@ -448,6 +461,10 @@
 		130D897B17ABE2D2005F9F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1218964517D633D100B6CB05 /* heatgain_facade2.jpg */,
+				1218964117D62F3F00B6CB05 /* hallway_overlay.png */,
+				1281CC1817D36E8D003C268A /* leaves.jpg */,
+				1281CC1617D36B77003C268A /* appIco.png */,
 				12369D7617B3D24E00DCC1DD /* Projects */,
 				130D897C17ABE2D2005F9F63 /* Assets */,
 			);
@@ -589,15 +606,19 @@
 				12A4F4F317B1440900F7930E /* map.png in Resources */,
 				12A4F4F417B1440900F7930E /* project.png in Resources */,
 				130D89AA17ABE2D2005F9F63 /* Tarmac.dat in Resources */,
+				1281CC1917D36E8D003C268A /* leaves.jpg in Resources */,
 				130D89AC17ABE2D2005F9F63 /* TextureTeapotBlue.png in Resources */,
 				12369D7117B2997B00DCC1DD /* Gear.png in Resources */,
 				130D89A017ABE2D2005F9F63 /* InfoPlist.strings in Resources */,
 				130D89A217ABE2D2005F9F63 /* Images.xcassets in Resources */,
+				1281CC1717D36B77003C268A /* appIco.png in Resources */,
 				130D89A717ABE2D2005F9F63 /* about.html in Resources */,
 				130D89AB17ABE2D2005F9F63 /* Tarmac.xml in Resources */,
+				1218964217D62F3F00B6CB05 /* hallway_overlay.png in Resources */,
 				130D89AD17ABE2D2005F9F63 /* TextureTeapotBrass.png in Resources */,
 				130D89A917ABE2D2005F9F63 /* StonesAndChips.xml in Resources */,
 				1354CB5917B3D9DA003DAFF7 /* Tutorial.storyboard in Resources */,
+				1218964617D633D100B6CB05 /* heatgain_facade2.jpg in Resources */,
 				130D89B017ABE2D2005F9F63 /* VuforiaTesting-Info.plist in Resources */,
 				1386C5FC17D0E0AA00A9E4B6 /* tutorial2.png in Resources */,
 				130D89AE17ABE2D2005F9F63 /* TextureTeapotRed.png in Resources */,
@@ -630,6 +651,7 @@
 				134FC0A317B17D2B00788E95 /* ProjectListViewController.m in Sources */,
 				130D89A417ABE2D2005F9F63 /* MainMenuViewController.m in Sources */,
 				12AAF23D17A98336008E3372 /* Texture2D.m in Sources */,
+				1218964017D61E7000B6CB05 /* PWNavController.m in Sources */,
 				134FC0A617B17D5D00788E95 /* AboutUsViewController.m in Sources */,
 				128A9E0717A972F100B1298B /* Texture.mm in Sources */,
 				1386C60117D0E27300A9E4B6 /* TutorialTabBarController.m in Sources */,
@@ -766,7 +788,6 @@
 		128A9D9E17A8085000B1298B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -787,7 +808,6 @@
 		128A9D9F17A8085000B1298B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

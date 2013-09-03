@@ -19,6 +19,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Main Menu" id="v9n-UP-YPr"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m45-HW-e3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -64,7 +65,7 @@
         <!--Project List View Controller-->
         <scene sceneID="bOj-s1-A1y">
             <objects>
-                <viewController storyboardIdentifier="ProjectListView" id="nEH-XS-WyQ" customClass="ProjectListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectListView" wantsFullScreenLayout="YES" id="nEH-XS-WyQ" customClass="ProjectListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FrV-qA-310"/>
                         <viewControllerLayoutGuide type="bottom" id="FRv-g3-GCv"/>
@@ -85,17 +86,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6N-u6-fEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101" y="-107"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav Controller-->
         <scene sceneID="Eki-Qw-So9">
             <objects>
-                <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="3FN-zV-nHQ" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="3FN-zV-nHQ" customClass="PWNavController" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zbm-zS-wPf">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>

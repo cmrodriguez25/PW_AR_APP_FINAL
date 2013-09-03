@@ -59,6 +59,9 @@
     NSString *mapImage = [NSString stringWithFormat:@"%@/Map", resourcePath];
     directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:mapImage error:&error];
     UIViewController *viewController = self.viewControllers[0];
+    //viewController.shouldAutorotate = NO;
+    
+    
     UIImageView *imgView = (UIImageView *)[viewController.view viewWithTag:100];
     imgView.image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", mapImage, directoryContents[0]]];
     
@@ -85,11 +88,6 @@
 {
     [super viewDidLoad];
     
-    // DELETE: This is for testing purposes only.
-    // prepareProjectDetail should be called by MainMenuViewController
-    // with the project name once the user selects the correct project.
-  //  [self prepareProjectDetail:@"Project1"];
-    
     if([self.tabBar respondsToSelector:@selector(setBarTintColor:)]) {
         [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
         [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
@@ -110,6 +108,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSUInteger) supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end
