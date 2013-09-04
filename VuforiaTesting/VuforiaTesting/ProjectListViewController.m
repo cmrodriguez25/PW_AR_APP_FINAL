@@ -121,8 +121,12 @@
     selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.3];
     cell.selectedBackgroundView = selectionColor;
     cell.opaque = NO;
+<<<<<<< HEAD
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16];
     
+=======
+     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:14];
+>>>>>>> 279b9aef18e3f564d3145e49bd1f8207c7d2d9b9
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
