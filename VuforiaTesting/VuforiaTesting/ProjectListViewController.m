@@ -110,7 +110,11 @@
     UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
     
     
+  // cell.textLabel.font = [UIFont fontWithName:@"Arial" size:10];
+    
+    
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    
     cell.textLabel.text = [listOfProjects objectAtIndex:indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.backgroundColor = [UIColor clearColor];
@@ -118,6 +122,7 @@
     selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.3];
     cell.selectedBackgroundView = selectionColor;
     cell.opaque = NO;
+     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:14];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
