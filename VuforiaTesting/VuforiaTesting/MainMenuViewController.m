@@ -29,13 +29,8 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    menuItems = [[NSMutableArray alloc]initWithObjects:@"Projects",@"Tutorial",@"About Us", nil];
-    //self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
-    //self.navigationController.navigationBar.translucent = YES;
-    
+
+-(void)viewDidAppear:(BOOL)animated {
     self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
     CGRect rect = self.navigationController.navigationBar.bounds;
     UIGraphicsBeginImageContext(rect.size);
@@ -50,6 +45,12 @@
     UIGraphicsEndImageContext();
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    menuItems = [[NSMutableArray alloc]initWithObjects:@"Projects",@"Tutorial",@"About Us", nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -59,21 +60,18 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *identifier = @"cell";
+    UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    tableView.backgroundView =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leaves.jpg"]];
 
-        UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
-    
-    
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        tableView.backgroundView =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leaves.jpg"]];
-    
-        cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        cell.backgroundColor = [UIColor clearColor];
-        UIView *selectionColor = [[UIView alloc] init];
-        selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.3];
-        cell.selectedBackgroundView = selectionColor;
-        cell.opaque = NO;
-        cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16];
+    cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.backgroundColor = [UIColor clearColor];
+    UIView *selectionColor = [[UIView alloc] init];
+    selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.3];
+    cell.selectedBackgroundView = selectionColor;
+    cell.opaque = NO;
+    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16];
 
     return cell;
 }
@@ -114,17 +112,18 @@
         
     }
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     return [menuItems count];
     
 }
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
-
 - (void)dealloc {
-    
     [super dealloc];
 }
 @end

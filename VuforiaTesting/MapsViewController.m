@@ -64,6 +64,7 @@
         imageView.image = (UIImage*)[imageArray objectAtIndex:i];
         [self.scrollView addSubview:imageView];
     }
+    pageControl.numberOfPages = [imageArray count];
     scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * [imageArray count], scrollView.frame.size.height);
 }
 

@@ -25,24 +25,34 @@
     return self;
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
+    CGRect rect = self.navigationController.navigationBar.bounds;
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context,
+                                   [[UIColor colorWithRed:0./255 green:227./255 blue: 100./255 alpha:.5] CGColor]) ;
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+    
+    UIGraphicsEndImageContext();
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
    // listOfProjects = [[NSMutableArray alloc]init];
     self.navigationItem.title = @"Projects";
 
-    CGRect rect = self.navigationController.navigationBar.bounds;
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context,
-        [[UIColor colorWithRed:0./255 green:227./255 blue: 100./255 alpha:.5] CGColor]) ;
-    CGContextFillRect(context, rect);
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Back" style: UIBarButtonItemStyleBordered target: nil action: nil];
     
-    [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+    [[self navigationItem] setBackBarButtonItem: newBackButton];
+    
+    [newBackButton release];
 
-    UIGraphicsEndImageContext();
-    
 	// Do any additional setup after loading the view.
      NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
     
@@ -58,7 +68,10 @@
     
     }
     
+    [directoryContents exchangeObjectAtIndex:0 withObjectAtIndex:2];
     listOfProjects = [[NSMutableArray alloc]initWithArray:directoryContents];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,6 +95,7 @@
     BOOL lessThanios7 = kCFCoreFoundationVersionNumber <=  kCFCoreFoundationVersionNumber_iOS_6_1;
     if(lessThanios7) tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);
 
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     return 1;
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -104,13 +118,14 @@
     cell.selectedBackgroundView = selectionColor;
     cell.opaque = NO;
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16];
+    
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *cellText = cell.textLabel.text;
    
-    if(indexPath.row ==2)
+    if(indexPath.row == 0)
     {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"ProjectDetail" bundle:nil];
      ProjectDetailTabBarViewController*vc = [sb instantiateViewControllerWithIdentifier:@"ProjectDetailView"];
@@ -119,22 +134,18 @@
     [self.navigationController pushViewController:vc animated:NO];
     
     }
-    
-    
-    else  if(indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 3)
+    else
     {
-        
-        
-        
         ProjectViewController*vc = [self.storyboard instantiateViewControllerWithIdentifier:@"projectView"];
-        
         //[vc prepareProjectDetail:cellText];
         [self.navigationController pushViewController:vc animated:NO];
     }
-
     
-  
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    // This will create a "invisible" footer
+    return 0.01f;
 }
 
 @end

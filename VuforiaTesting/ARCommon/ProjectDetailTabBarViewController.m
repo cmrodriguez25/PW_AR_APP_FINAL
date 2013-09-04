@@ -99,16 +99,7 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    if([self.tabBar respondsToSelector:@selector(setBarTintColor:)]) {
-        [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
-        [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
-    }
-    
-    
+-(void) viewDidAppear:(BOOL)animated {
     self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
     CGRect rect = self.navigationController.navigationBar.bounds;
     UIGraphicsBeginImageContext(rect.size);
@@ -119,9 +110,20 @@
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     
     [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
-    
     UIGraphicsEndImageContext();
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     
+    if([self.tabBar respondsToSelector:@selector(setBarTintColor:)]) {
+        [[UITabBar appearance] setBackgroundColor:[UIColor clearColor]];
+        [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+    }
+    
+
 
 	// Do any additional setup after loading the view.
 
