@@ -121,7 +121,7 @@
     selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.3];
     cell.selectedBackgroundView = selectionColor;
     cell.opaque = NO;
-    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16];
+    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:14];
     
     return cell;
 }
