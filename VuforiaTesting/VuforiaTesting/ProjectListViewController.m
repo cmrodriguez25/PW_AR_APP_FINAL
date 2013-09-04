@@ -29,19 +29,6 @@
     [super viewDidLoad];
    // listOfProjects = [[NSMutableArray alloc]init];
     self.navigationItem.title = @"Projects";
-    
-    
-
-    
-   /* self.navigationController.navigationBar.translucent = YES; // Setting this slides the view up, underneath the nav bar (otherwise it'll appear black)
-    const float colorMask[6] = {233, 255, 233, 255, 233, 255};
-    UIImage *img = [[UIImage alloc] init];
-    UIImage *maskedImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(img.CGImage, colorMask)];
-    
-    [self.navigationController.navigationBar setBackgroundImage:maskedImage forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
-    [img release];*/
-    
 
     CGRect rect = self.navigationController.navigationBar.bounds;
     UIGraphicsBeginImageContext(rect.size);
@@ -71,9 +58,6 @@
     }
     
     listOfProjects = [[NSMutableArray alloc]initWithArray:directoryContents];
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,8 +78,9 @@
     
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);
+    BOOL lessThanios7 = kCFCoreFoundationVersionNumber <=  kCFCoreFoundationVersionNumber_iOS_6_1;
+    if(lessThanios7) tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);
+
     return 1;
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -117,6 +102,7 @@
     selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.3];
     cell.selectedBackgroundView = selectionColor;
     cell.opaque = NO;
+    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {

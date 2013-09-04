@@ -33,8 +33,11 @@ NSString *details;
 {
     @try {
         if([message isEqual: @"Diesel"]) {
+            infoButton.hidden = NO;
             //[details setText:@"This is a yellow teapot."];
             detailsView.text = @"THE SOUTH FACADE OF AHC-4 WAS DESIGNED TO PROTECT THE OFFICES FROM SOLAR HEAT GAIN. \n\nEACH WINDOW IS TILTED IN RESPONSE TO A HEAT STUDY DIAGRAM THAT WAS GENERATED FOR THE SOUTH FACADE OF THE BUILDING.";
+        } else {
+            infoButton.hidden = YES;
         }
     }
     @catch (NSException * e) {

@@ -10,7 +10,7 @@
 #import "QCARutils.h"
 #import "PWParentViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
-
+#import "MapsViewController.h"
 @implementation ProjectDetailTabBarViewController
 
 -(void)prepareProjectDetail:(NSString *)projectName
@@ -60,18 +60,22 @@
     // Load map image into appropriate UIImageView
     NSString *mapImage = [NSString stringWithFormat:@"%@/Map", resourcePath];
     directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:mapImage error:&error];
-    UIViewController *viewController = self.viewControllers[0];
+    MapsViewController *viewController = (MapsViewController *)self.viewControllers[0];
+    [viewController initImageArray];
     //viewController.shouldAutorotate = NO;
+    for (int i = 0; i < [directoryContents count]; i++) {
+        [viewController addObjectToImageArray:[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", mapImage, directoryContents[i]]]];
+    }
     
-    
-    UIImageView *imgView = (UIImageView *)[viewController.view viewWithTag:100];
-    imgView.image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", mapImage, directoryContents[0]]];
-    
+    viewController.scrollView.contentSize = CGSizeMake(viewController.scrollView.frame.size.width * [directoryContents count], viewController.scrollView.frame.size.height);
+
+
+    //Helvetica or Ariel    
     // Load project image into appropriate UIImageView
     NSString *projectImage = [NSString stringWithFormat:@"%@/Picture", resourcePath];
     directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:projectImage error:&error];
     viewController = self.viewControllers[1];
-    imgView = (UIImageView *)[viewController.view viewWithTag:100];
+    UIImageView *imgView = (UIImageView *)[viewController.view viewWithTag:100];
     imgView.image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", projectImage, directoryContents[0]]];
     
     //Load overlays
@@ -83,6 +87,7 @@
     }
     
     [(PWParentViewController *)self.viewControllers[2] initWithModelDict:_modelDict andOverlays:_availableOverlays];
+    self.selectedViewController = self.viewControllers[1];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
