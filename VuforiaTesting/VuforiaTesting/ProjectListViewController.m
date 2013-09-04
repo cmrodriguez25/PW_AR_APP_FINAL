@@ -68,7 +68,7 @@
     
     }
     
-    [directoryContents exchangeObjectAtIndex:0 withObjectAtIndex:2];
+    [directoryContents exchangeObjectAtIndex:0 withObjectAtIndex:1];
     listOfProjects = [[NSMutableArray alloc]initWithArray:directoryContents];
     
     
@@ -109,7 +109,11 @@
     UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
     
     
+  // cell.textLabel.font = [UIFont fontWithName:@"Arial" size:10];
+    
+    
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    
     cell.textLabel.text = [listOfProjects objectAtIndex:indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.backgroundColor = [UIColor clearColor];
