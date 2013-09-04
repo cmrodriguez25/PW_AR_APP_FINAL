@@ -68,7 +68,7 @@
     
     }
     
-    [directoryContents exchangeObjectAtIndex:0 withObjectAtIndex:1];
+    //[directoryContents exchangeObjectAtIndex:0 withObjectAtIndex:1];
     listOfProjects = [[NSMutableArray alloc]initWithArray:directoryContents];
     
     
