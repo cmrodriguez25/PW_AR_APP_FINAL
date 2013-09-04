@@ -13,6 +13,7 @@
 		1218964C17D6774500B6CB05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12369D6617B27DB100DCC1DD /* Main.storyboard */; };
 		1218964E17D6827E00B6CB05 /* isisvideo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1218964D17D681E400B6CB05 /* isisvideo.m4v */; };
 		1218965017D690E800B6CB05 /* buildings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1218964F17D690E800B6CB05 /* buildings.png */; };
+		1218965617D6A30600B6CB05 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218965517D6A30600B6CB05 /* MapsViewController.m */; };
 		12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
 		12369D7117B2997B00DCC1DD /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7017B2997B00DCC1DD /* Gear.png */; };
 		12369D7717B3D24E00DCC1DD /* Projects in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7617B3D24E00DCC1DD /* Projects */; };
@@ -108,6 +109,8 @@
 		1218964817D673E000B6CB05 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		1218964D17D681E400B6CB05 /* isisvideo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = isisvideo.m4v; sourceTree = "<group>"; };
 		1218964F17D690E800B6CB05 /* buildings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buildings.png; path = Assets/buildings.png; sourceTree = "<group>"; };
+		1218965417D6A30500B6CB05 /* MapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapsViewController.h; path = ../MapsViewController.h; sourceTree = "<group>"; };
+		1218965517D6A30600B6CB05 /* MapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapsViewController.m; path = ../MapsViewController.m; sourceTree = "<group>"; };
 		12369D6717B27DB100DCC1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12369D7017B2997B00DCC1DD /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
 		12369D7617B3D24E00DCC1DD /* Projects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Projects; path = Assets/Projects; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 		130D896717ABE2D2005F9F63 /* VuforiaTesting */ = {
 			isa = PBXGroup;
 			children = (
+				1218965417D6A30500B6CB05 /* MapsViewController.h */,
+				1218965517D6A30600B6CB05 /* MapsViewController.m */,
 				123BEEB317ADAD8B007393CA /* ProjectDetailTabBarViewController.h */,
 				123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */,
 				130D896817ABE2D2005F9F63 /* AppDelegate.h */,
@@ -697,6 +702,7 @@
 				123BEEB517ADAD8B007393CA /* ProjectDetailTabBarViewController.m in Sources */,
 				1386C5F417D0D70F00A9E4B6 /* TSecondViewController.m in Sources */,
 				130D899D17ABE2D2005F9F63 /* AppDelegate.m in Sources */,
+				1218965617D6A30600B6CB05 /* MapsViewController.m in Sources */,
 				134FC0A317B17D2B00788E95 /* ProjectListViewController.m in Sources */,
 				130D89A417ABE2D2005F9F63 /* MainMenuViewController.m in Sources */,
 				12AAF23D17A98336008E3372 /* Texture2D.m in Sources */,
