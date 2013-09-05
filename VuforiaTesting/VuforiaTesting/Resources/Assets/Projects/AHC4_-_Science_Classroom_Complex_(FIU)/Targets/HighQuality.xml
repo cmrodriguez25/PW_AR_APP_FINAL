@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
-  <Tracking>
-    <ImageTarget name="Room309" size="60.000000 61.160221" />
-    <ImageTarget name="Diesel" size="50.000000 58.544838" />
-    <ImageTarget name="Stair1Floor" size="40.000000 39.409481" />
-    <ImageTarget name="Room312" size="100.000000 30.514095" />
-  </Tracking>
-</QCARConfig>
