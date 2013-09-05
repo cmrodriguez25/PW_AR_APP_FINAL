@@ -94,10 +94,10 @@
     {
        
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Tutorial" bundle:nil];
-        TutorialTabBarController*vc = [sb instantiateViewControllerWithIdentifier:@"TutorialTabBarView"];
+        TutorialTabBarController *vc = [sb instantiateViewControllerWithIdentifier:@"TutorialTabBarView"];
         
         //[vc prepareProjectDetail:cellText];
-        [self.navigationController pushViewController:vc animated:NO];
+        [self.navigationController pushViewController:vc animated:YES];
         
        // TFirstViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TFirstView"];
         //[self.navigationController pushViewController:vc animated:YES];

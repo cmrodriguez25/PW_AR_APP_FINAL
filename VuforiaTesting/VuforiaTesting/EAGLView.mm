@@ -28,7 +28,7 @@ namespace {
     };
     
     // Model scale factor
-    const float kObjectScale = 200.0f;
+    const float kObjectScale = 1000.0f;
 }
 
 
@@ -195,7 +195,7 @@ QCAR::Matrix44F modelViewMatrix;
             
             // OpenGL 2
             if(refresh) {
-                ShaderUtils::translatePoseMatrix(0.0f, 30.0f, 50, &modelViewMatrix.data[0]);
+                ShaderUtils::translatePoseMatrix(0.0f, 100.0f, 50, &modelViewMatrix.data[0]);
                 ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
                 ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
                 refresh = NO;
