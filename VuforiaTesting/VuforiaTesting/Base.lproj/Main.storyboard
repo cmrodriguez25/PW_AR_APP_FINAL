@@ -50,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaves.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5WJ-MV-bd2"/>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-mN-3mb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-mN-3mb">
                                 <color key="backgroundColor" red="0.77697613603930504" green="1" blue="0.59182172550676659" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="159" id="Wsg-EF-tfy"/>
@@ -59,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teX-aL-52B">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teX-aL-52B">
                                 <color key="backgroundColor" red="0.77697613600000004" green="1" blue="0.59182172550000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="159" id="hqh-xX-UDZ"/>
@@ -145,9 +145,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="E17-b7-67u" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5i9-WG-6m0"/>
                             <constraint firstItem="RiN-8q-uqD" firstAttribute="top" secondItem="5LB-dM-tYr" secondAttribute="top" constant="141" id="8JX-Uo-khC"/>
-                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="leading" secondItem="5LB-dM-tYr" secondAttribute="leading" constant="-38" id="Ocz-vi-2jD"/>
-                            <constraint firstItem="RiN-8q-uqD" firstAttribute="centerX" secondItem="5LB-dM-tYr" secondAttribute="centerX" type="default" id="aNp-XE-b4g"/>
-                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="top" secondItem="5LB-dM-tYr" secondAttribute="top" constant="-16" id="pSO-yH-1D9"/>
+                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="bottom" secondItem="5LB-dM-tYr" secondAttribute="bottom" type="default" id="aRp-Zr-ngX"/>
+                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="leading" secondItem="5LB-dM-tYr" secondAttribute="leading" type="default" id="dHq-Ha-S2a"/>
+                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="top" secondItem="5LB-dM-tYr" secondAttribute="top" type="default" id="lcc-iP-GuI"/>
+                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="centerX" secondItem="RiN-8q-uqD" secondAttribute="centerX" type="default" id="n0K-gD-bam"/>
+                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="trailing" secondItem="5LB-dM-tYr" secondAttribute="trailing" type="default" id="rQs-Zm-oVM"/>
                             <constraint firstItem="E17-b7-67u" firstAttribute="top" secondItem="5LB-dM-tYr" secondAttribute="top" constant="-42" id="t2Z-Zf-KHp"/>
                         </constraints>
                     </view>
