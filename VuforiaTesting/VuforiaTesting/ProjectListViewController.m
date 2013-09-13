@@ -38,8 +38,14 @@
     [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
     
     UIGraphicsEndImageContext();
+
+    //[[UIBarButtonItem appearance] setBackBarButtonItem:backBarButtonItem];
 }
 
+
+- (void) popViewController {
+    [[self navigationController] popViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad
 {
@@ -47,11 +53,6 @@
    // listOfProjects = [[NSMutableArray alloc]init];
     self.navigationItem.title = @"Projects";
 
-    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Back" style: UIBarButtonItemStyleBordered target: nil action: nil];
-    
-    [[self navigationItem] setBackBarButtonItem: newBackButton];
-    
-    [newBackButton release];
 
 	// Do any additional setup after loading the view.
      NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
@@ -81,6 +82,23 @@
     self.navigationItem.titleView = label;
     label.text = NSLocalizedString(@"Projects", @"");
     [label sizeToFit];
+    
+    
+    UIImage *backButtonImage = [UIImage imageNamed:@"backButton.png"];
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [backButton setImage:backButtonImage
+                forState:UIControlStateNormal];
+    
+    backButton.frame = CGRectMake(0, 0, backButtonImage.size.width, backButtonImage.size.height);
+    
+    [backButton addTarget:self
+                   action:@selector(popViewController)
+         forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backBarButtonItem;
+
     
 }
 

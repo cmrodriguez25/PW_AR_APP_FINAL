@@ -46,6 +46,7 @@
 		12A4F4F417B1440900F7930E /* project.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A4F4F117B143BD00F7930E /* project.png */; };
 		12AAF23D17A98336008E3372 /* Texture2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AAF23C17A98307008E3372 /* Texture2D.m */; };
 		12D015CD17E38580000C2AEE /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D015CC17E38580000C2AEE /* Logo.png */; };
+		12D015D517E395DC000C2AEE /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D015D317E3950D000C2AEE /* backButton.png */; };
 		130D899D17ABE2D2005F9F63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 130D896917ABE2D2005F9F63 /* AppDelegate.m */; };
 		130D899F17ABE2D2005F9F63 /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 130D896E17ABE2D2005F9F63 /* EAGLView.mm */; };
 		130D89A017ABE2D2005F9F63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 130D896F17ABE2D2005F9F63 /* InfoPlist.strings */; };
@@ -121,7 +122,7 @@
 		125D302C17AC175F00AC67CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/ProjectDetail.storyboard; sourceTree = "<group>"; };
 		1281CC1617D36B77003C268A /* appIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIco.png; sourceTree = "<group>"; };
 		1281CC1817D36E8D003C268A /* leaves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leaves.jpg; sourceTree = "<group>"; };
-		128A9D6817A8084F00B1298B /* VuforiaTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VuforiaTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		128A9D6817A8084F00B1298B /* 3iPW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3iPW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128A9D6B17A8084F00B1298B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		128A9D6D17A8084F00B1298B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		128A9D6F17A8084F00B1298B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -159,6 +160,7 @@
 		12AAF23B17A98307008E3372 /* Texture2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Texture2D.h; path = ../VuforiaTesting/Texture2D.h; sourceTree = "<group>"; };
 		12AAF23C17A98307008E3372 /* Texture2D.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Texture2D.m; path = ../VuforiaTesting/Texture2D.m; sourceTree = "<group>"; };
 		12D015CC17E38580000C2AEE /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../Logo.png; sourceTree = "<group>"; };
+		12D015D317E3950D000C2AEE /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
 		130D893A17ABE2D2005F9F63 /* Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Area.h; sourceTree = "<group>"; };
 		130D893B17ABE2D2005F9F63 /* CameraCalibration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraCalibration.h; sourceTree = "<group>"; };
 		130D893C17ABE2D2005F9F63 /* CameraDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDevice.h; sourceTree = "<group>"; };
@@ -333,7 +335,7 @@
 		128A9D6917A8084F00B1298B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				128A9D6817A8084F00B1298B /* VuforiaTesting.app */,
+				128A9D6817A8084F00B1298B /* 3iPW.app */,
 				128A9D8C17A8085000B1298B /* VuforiaTestingTests.xctest */,
 			);
 			name = Products;
@@ -507,6 +509,7 @@
 		130D897B17ABE2D2005F9F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12D015D317E3950D000C2AEE /* backButton.png */,
 				1218964F17D690E800B6CB05 /* buildings.png */,
 				1218964D17D681E400B6CB05 /* isisvideo.m4v */,
 				1218964517D633D100B6CB05 /* heatgain_facade2.jpg */,
@@ -585,7 +588,7 @@
 			);
 			name = VuforiaTesting;
 			productName = VuforiaTesting;
-			productReference = 128A9D6817A8084F00B1298B /* VuforiaTesting.app */;
+			productReference = 128A9D6817A8084F00B1298B /* 3iPW.app */;
 			productType = "com.apple.product-type.application";
 		};
 		128A9D8B17A8085000B1298B /* VuforiaTestingTests */ = {
@@ -647,6 +650,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D015D517E395DC000C2AEE /* backButton.png in Resources */,
 				1218964E17D6827E00B6CB05 /* isisvideo.m4v in Resources */,
 				1218965017D690E800B6CB05 /* buildings.png in Resources */,
 				1218964C17D6774500B6CB05 /* Main.storyboard in Resources */,
@@ -858,8 +862,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Isis Fumero (DLH6L6DR9B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Isis Fumero (DLH6L6DR9B)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -873,9 +877,9 @@
 					"\"$(SRCROOT)/../../VuforiaTesting\"",
 					"\"$(SRCROOT)/../..\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PRODUCT_NAME = 3iPW;
+				PROVISIONING_PROFILE = "583D780C-3DE2-4610-8B66-7C9ECA859449";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "583D780C-3DE2-4610-8B66-7C9ECA859449";
 				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -886,8 +890,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Isis Fumero (DLH6L6DR9B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Isis Fumero (DLH6L6DR9B)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -901,9 +905,9 @@
 					"\"$(SRCROOT)/../../VuforiaTesting\"",
 					"\"$(SRCROOT)/../..\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PRODUCT_NAME = 3iPW;
+				PROVISIONING_PROFILE = "583D780C-3DE2-4610-8B66-7C9ECA859449";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "583D780C-3DE2-4610-8B66-7C9ECA859449";
 				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <UIKit/UIKit.h>
 
 @implementation AppDelegate
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -17,11 +19,17 @@
     
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackOpaque];
+    
+    
+    /*[[UIBarButtonItem appearance]
+     setBackButtonBackgroundImage:[[UIImage imageNamed:@"backButton.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f) resizingMode:UIImageResizingModeStretch]
+     forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];*/
 
     return YES;
     
 }
-							
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -50,3 +58,5 @@
 }
 
 @end
+
+
