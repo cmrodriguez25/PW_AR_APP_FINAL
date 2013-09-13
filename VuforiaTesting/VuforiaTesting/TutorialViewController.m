@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Tutorial";
 	// Do any additional setup after loading the view.
 }
 

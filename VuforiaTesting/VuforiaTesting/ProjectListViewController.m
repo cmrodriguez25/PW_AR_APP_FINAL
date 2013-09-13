@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+
     }
     return self;
 }
@@ -31,7 +31,7 @@
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context,
-                                   [[UIColor colorWithRed:0./255 green:227./255 blue: 100./255 alpha:.5] CGColor]) ;
+                                   [[UIColor colorWithRed:255./255 green:255./255 blue: 255./255 alpha:.7] CGColor]) ;
     CGContextFillRect(context, rect);
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     
@@ -71,6 +71,16 @@
     //[directoryContents exchangeObjectAtIndex:0 withObjectAtIndex:1];
     listOfProjects = [[NSMutableArray alloc]initWithArray:directoryContents];
     
+    // this will appear as the title in the navigation bar
+    UILabel *label = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont systemFontOfSize:17];
+    label.textAlignment = NSTextAlignmentCenter;
+    // ^-Use UITextAlignmentCenter for older SDKs.
+    label.textColor = [UIColor blackColor]; // change this color
+    self.navigationItem.titleView = label;
+    label.text = NSLocalizedString(@"Projects", @"");
+    [label sizeToFit];
     
 }
 
@@ -92,8 +102,8 @@
     
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-     tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);   
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);   
+    tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     return 1;
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -114,11 +124,11 @@
     
     cell.textLabel.text = [listOfProjects objectAtIndex:indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.backgroundColor = [UIColor clearColor];
+    cell.contentView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(255/255.0) blue:(255/255.0) alpha:.2];
     UIView *selectionColor = [[UIView alloc] init];
-    selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.3];
+    selectionColor.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(245/255.0) blue:(245/255.0) alpha:.7];
     cell.selectedBackgroundView = selectionColor;
-    cell.opaque = NO;
+    //cell.opaque = NO;
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:14];
     
     return cell;

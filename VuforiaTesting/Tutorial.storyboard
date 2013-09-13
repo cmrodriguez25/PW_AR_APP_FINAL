@@ -45,7 +45,7 @@
                             <constraint firstItem="sfE-Zk-TfU" firstAttribute="trailing" secondItem="xdI-fi-AJB" secondAttribute="trailing" type="default" id="fAn-jm-scO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Step 1" image="first" id="glY-J2-i1Z"/>
+                    <tabBarItem key="tabBarItem" title="Step 1" image="circles.png" id="glY-J2-i1Z"/>
                     <navigationItem key="navigationItem" id="Ggs-I8-4gh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2n-xm-y18" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="c5q-1m-yOa" firstAttribute="top" secondItem="WH6-gs-w04" secondAttribute="top" type="default" id="xF5-5u-ErR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Step 3" image="first" id="5pG-0i-09H"/>
+                    <tabBarItem key="tabBarItem" title="Step 3" image="circles.png" id="5pG-0i-09H"/>
                     <navigationItem key="navigationItem" id="Pqa-hE-z8p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FjO-GS-nHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,7 +95,7 @@
                             <constraint firstItem="ZKc-jW-K7l" firstAttribute="bottom" secondItem="Wco-Qh-mV5" secondAttribute="bottom" type="default" id="lY4-Gg-6rl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Step 4" image="first" id="n5p-uN-sJB"/>
+                    <tabBarItem key="tabBarItem" title="Step 4" image="circles.png" id="n5p-uN-sJB"/>
                     <navigationItem key="navigationItem" id="VO8-qp-FpK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q48-qj-tz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,7 +120,7 @@
                             <constraint firstItem="zUY-2m-5OA" firstAttribute="trailing" secondItem="EsL-vp-pUv" secondAttribute="trailing" type="default" id="yLR-ig-2NT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Step 2" image="first" id="y90-Ue-Tdp"/>
+                    <tabBarItem key="tabBarItem" title="Step 2" image="circles.png" id="y90-Ue-Tdp"/>
                     <navigationItem key="navigationItem" id="njM-yx-8wl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfq-eI-7X6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,7 +133,7 @@
         <image name="app_design_tutorial2.jpg" width="640" height="960"/>
         <image name="app_design_tutorial3.jpg" width="640" height="960"/>
         <image name="app_design_tutorial4.jpg" width="640" height="960"/>
-        <image name="first" width="30" height="30"/>
+        <image name="circles.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">

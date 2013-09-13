@@ -26,6 +26,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // this will appear as the title in the navigation bar
+    UILabel *label = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont systemFontOfSize:17];
+    label.textAlignment = NSTextAlignmentCenter;
+    // ^-Use UITextAlignmentCenter for older SDKs.
+    label.textColor = [UIColor blackColor]; // change this color
+    self.navigationItem.titleView = label;
+    label.text = NSLocalizedString(@"Tutorial", @"");
+    [label sizeToFit];
 	// Do any additional setup after loading the view.
 }
 
