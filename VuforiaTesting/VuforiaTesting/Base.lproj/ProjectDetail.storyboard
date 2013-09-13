@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.1" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="med-0r-nVI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="med-0r-nVI">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Project Detail Tab Bar View Controller-->
@@ -31,27 +32,30 @@
         <scene sceneID="AQ2-nZ-tBV">
             <objects>
                 <viewController id="mIq-qI-nfK" customClass="MapsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J3i-6X-C5Q"/>
-                        <viewControllerLayoutGuide type="bottom" id="9cy-wb-5GM"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kLU-xj-ju2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYj-2s-aZv">
-                                <rect key="frame" x="0.0" y="-36" width="320" height="555"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYj-2s-aZv">
                                 <connections>
                                     <outlet property="delegate" destination="mIq-qI-nfK" id="Z6V-OS-Dmf"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZnH-Do-8qp">
-                                <rect key="frame" x="141" y="482" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZnH-Do-8qp">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0L0-WX-NPT"/>
+                                </constraints>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZnH-Do-8qp" firstAttribute="centerX" secondItem="ZYj-2s-aZv" secondAttribute="centerX" type="default" id="2lY-0M-D8B"/>
+                            <constraint firstItem="ZYj-2s-aZv" firstAttribute="top" secondItem="kLU-xj-ju2" secondAttribute="top" type="default" id="MGA-u5-j1l"/>
+                            <constraint firstItem="ZYj-2s-aZv" firstAttribute="leading" secondItem="kLU-xj-ju2" secondAttribute="leading" type="default" id="PUX-0f-HtU"/>
+                            <constraint firstItem="ZYj-2s-aZv" firstAttribute="bottom" secondItem="kLU-xj-ju2" secondAttribute="bottom" type="default" id="aXF-e1-XGr"/>
+                            <constraint firstItem="ZYj-2s-aZv" firstAttribute="trailing" secondItem="kLU-xj-ju2" secondAttribute="trailing" type="default" id="psy-iz-0d8"/>
+                            <constraint firstItem="ZnH-Do-8qp" firstAttribute="bottom" secondItem="kLU-xj-ju2" secondAttribute="bottom" type="default" id="soS-gX-Ob4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map.png" id="nZa-x6-Sri">
                         <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="2"/>
@@ -70,20 +74,19 @@
         <scene sceneID="hbr-3a-tYv">
             <objects>
                 <viewController id="Iye-ty-DaP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JjY-Es-aRe"/>
-                        <viewControllerLayoutGuide type="bottom" id="Nik-ta-TPM"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hed-NP-e1k">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1G-BO-dKP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G1G-BO-dKP"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G1G-BO-dKP" firstAttribute="trailing" secondItem="Hed-NP-e1k" secondAttribute="trailing" type="default" id="6D9-S5-uRa"/>
+                            <constraint firstItem="G1G-BO-dKP" firstAttribute="leading" secondItem="Hed-NP-e1k" secondAttribute="leading" type="default" id="QTu-LI-H5T"/>
+                            <constraint firstItem="G1G-BO-dKP" firstAttribute="top" secondItem="Hed-NP-e1k" secondAttribute="top" type="default" id="g1e-LK-IV3"/>
+                            <constraint firstItem="G1G-BO-dKP" firstAttribute="bottom" secondItem="Hed-NP-e1k" secondAttribute="bottom" type="default" id="nGy-FM-8xV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Project" image="buildings.png" id="WsP-F1-OHY"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -96,62 +99,50 @@
         <scene sceneID="ZPF-Db-Frd">
             <objects>
                 <viewController storyboardIdentifier="ARCamViewController" id="NNC-9R-yCR" customClass="PWParentViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HwT-OZ-wMV"/>
-                        <viewControllerLayoutGuide type="bottom" id="d8X-sM-nPU"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qNo-Cr-izw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tio-ty-cHD">
-                                <rect key="frame" x="-47" y="119" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tio-ty-cHD">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tio-ty-cHD" firstAttribute="leading" secondItem="qNo-Cr-izw" secondAttribute="leading" constant="-73" id="VFk-a7-u2G"/>
+                            <constraint firstItem="Tio-ty-cHD" firstAttribute="top" secondItem="qNo-Cr-izw" secondAttribute="top" constant="-70" id="k0T-qQ-YZ2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera.png" id="2tR-N9-gJf"/>
                     <navigationItem key="navigationItem" id="etP-kI-8zM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9e-l5-rGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="605"/>
+            <point key="canvasLocation" x="504" y="784"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OAw-2Q-Q2V">
             <objects>
                 <viewController storyboardIdentifier="HUDVC" id="Mwo-zU-wGw" customClass="HUDViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QNT-e2-yNW"/>
-                        <viewControllerLayoutGuide type="bottom" id="6cZ-aZ-7cv"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4P8-sc-QgP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-9M-cnE">
-                                <rect key="frame" x="0.0" y="-11" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-9M-cnE">
                                 <subviews>
-                                    <imageView opaque="NO" userInteractionEnabled="NO" tag="25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-ma-awC">
-                                        <rect key="frame" x="0.0" y="9" width="325" height="524"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-Yj-rQa">
-                                        <rect key="frame" x="10" y="132" width="300" height="243"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <imageView opaque="NO" userInteractionEnabled="NO" tag="25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-ma-awC"/>
+                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-Yj-rQa">
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="248" id="ysA-qL-CQR"/>
+                                        </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cih-oh-Dz7">
-                                        <rect key="frame" x="275" y="94" width="35" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cih-oh-Dz7">
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" image="project.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,9 +153,26 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="zpx-ma-awC" firstAttribute="top" secondItem="FMY-9M-cnE" secondAttribute="top" type="default" id="0hC-T2-cvW"/>
+                                    <constraint firstItem="zpx-ma-awC" firstAttribute="leading" secondItem="FMY-9M-cnE" secondAttribute="leading" type="default" id="5Bb-Bh-o7f"/>
+                                    <constraint firstItem="zpx-ma-awC" firstAttribute="bottom" secondItem="FMY-9M-cnE" secondAttribute="bottom" type="default" id="S7y-Hc-iWN"/>
+                                    <constraint firstItem="cih-oh-Dz7" firstAttribute="top" secondItem="FMY-9M-cnE" secondAttribute="top" constant="62" id="Teh-fS-gla"/>
+                                    <constraint firstAttribute="trailing" secondItem="cih-oh-Dz7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UgX-Wu-f8F"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eb0-Yj-rQa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Vm9-jQ-YCM"/>
+                                    <constraint firstItem="zpx-ma-awC" firstAttribute="trailing" secondItem="FMY-9M-cnE" secondAttribute="trailing" type="default" id="ZWT-bq-bLF"/>
+                                    <constraint firstItem="Eb0-Yj-rQa" firstAttribute="top" secondItem="cih-oh-Dz7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fCB-Ld-GAc"/>
+                                    <constraint firstItem="Eb0-Yj-rQa" firstAttribute="leading" secondItem="FMY-9M-cnE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="m90-rW-P50"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FMY-9M-cnE" firstAttribute="leading" secondItem="4P8-sc-QgP" secondAttribute="leading" type="default" id="an9-ch-uAZ"/>
+                            <constraint firstItem="FMY-9M-cnE" firstAttribute="bottom" secondItem="4P8-sc-QgP" secondAttribute="bottom" type="default" id="cDe-yo-bOp"/>
+                            <constraint firstItem="FMY-9M-cnE" firstAttribute="top" secondItem="4P8-sc-QgP" secondAttribute="top" type="default" id="jO1-cs-5vm"/>
+                            <constraint firstItem="FMY-9M-cnE" firstAttribute="trailing" secondItem="4P8-sc-QgP" secondAttribute="trailing" type="default" id="x9C-Lw-NkD"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="details" destination="Eb0-Yj-rQa" id="Q7D-mg-bXt"/>
@@ -184,6 +192,37 @@
         <image name="map.png" width="37" height="30"/>
         <image name="project.png" width="18" height="30"/>
     </resources>
+    <classes>
+        <class className="ARParentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ARParentViewController.h"/>
+        </class>
+        <class className="HUDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HUDViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clickInfoButton:"/>
+                <relationship kind="outlet" name="details" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="detailsView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="overlayView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="MapsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PWParentViewController" superclassName="ARParentViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PWParentViewController.h"/>
+        </class>
+        <class className="ProjectDetailTabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProjectDetailTabBarViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

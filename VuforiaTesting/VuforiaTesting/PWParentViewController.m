@@ -11,6 +11,7 @@
 #import "QCARutils.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "ProjectDetailTabBarViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 extern bool isInterfaceOrientationPortrait;
 @implementation PWParentViewController

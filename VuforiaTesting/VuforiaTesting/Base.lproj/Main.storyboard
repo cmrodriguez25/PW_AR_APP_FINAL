@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.1" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3FN-zV-nHQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3FN-zV-nHQ">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Main Menu View Controller - Main Menu-->
@@ -10,7 +11,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="MMenu" wantsFullScreenLayout="YES" id="3GJ-Yu-Nxr" customClass="MainMenuViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="120" sectionHeaderHeight="23" sectionFooterHeight="22" id="kyH-Eh-Srf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -30,12 +31,8 @@
         <scene sceneID="SVI-1N-dvI">
             <objects>
                 <viewController storyboardIdentifier="TutorialView" id="bL0-UN-qnL" customClass="TutorialViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3Zf-IO-xjH"/>
-                        <viewControllerLayoutGuide type="bottom" id="KIh-K8-MQM"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="s25-iS-REX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -48,44 +45,54 @@
         <scene sceneID="1Ub-Ul-bOh">
             <objects>
                 <viewController storyboardIdentifier="AboutUsView" wantsFullScreenLayout="YES" id="Xp6-nr-JpI" customClass="AboutUsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hke-ls-Ih6"/>
-                        <viewControllerLayoutGuide type="bottom" id="RR8-QS-cfa"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bNE-zc-dfV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leaves.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5WJ-MV-bd2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-mN-3mb">
-                                <rect key="frame" x="30" y="118" width="267" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaves.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5WJ-MV-bd2"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-mN-3mb">
                                 <color key="backgroundColor" red="0.77697613603930504" green="1" blue="0.59182172550676659" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="Wsg-EF-tfy"/>
+                                </constraints>
                                 <string key="text">The content and image of this app was ideated by Isis Fumero, Alejandro Branger and Silvana Herrera with the help of a research grant by Perkins+Will through its Innovation Incubator program. This program aims to foster an invigorating culture of innovation by supporting small, focused research projects through micro-grants of money and time.                                     The purpose of this mobile app is to augment our understanding of the underlying facts and benefits of sustainable design ideas in the built environment and showcase the convergence of design, technology and research that creates places that improve how we live and work.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teX-aL-52B">
-                                <rect key="frame" x="31" y="381" width="266" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teX-aL-52B">
                                 <color key="backgroundColor" red="0.77697613600000004" green="1" blue="0.59182172550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="hqh-xX-UDZ"/>
+                                </constraints>
                                 <string key="text">Michell Consulting Group is headquartered in Miami, Florida. We specialize in developing, implementing, integrating, and maintaining advanced technologies for our clients in order to achieve maximum return on investment. We are committed to our clients and employees. Our clients trust us with integral parts of their business, and we deliver. We have developed lasting relationships with our clients because we are by their side long after the initial implementation is complete.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="one-linelogolarge_blackblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="lnI-4z-W8s">
-                                <rect key="frame" x="31" y="46" width="265" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one-linelogolarge_blackblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="lnI-4z-W8s">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="eKe-VL-azJ"/>
+                                    <constraint firstAttribute="width" constant="295" id="h8z-0m-z1k"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image001alpha.png" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-jk-8SN">
-                                <rect key="frame" x="31" y="300" width="266" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image001alpha.png" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-jk-8SN"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="teX-aL-52B" firstAttribute="leading" secondItem="bNE-zc-dfV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0HP-zR-Wdd"/>
+                            <constraint firstItem="b8Z-mN-3mb" firstAttribute="centerX" secondItem="yQY-jk-8SN" secondAttribute="centerX" type="default" id="1lt-3Z-TFC"/>
+                            <constraint firstAttribute="bottom" secondItem="yQY-jk-8SN" secondAttribute="bottom" constant="205" id="DYS-5R-yW1"/>
+                            <constraint firstItem="b8Z-mN-3mb" firstAttribute="top" secondItem="bNE-zc-dfV" secondAttribute="top" constant="125" id="HYe-e4-Fda"/>
+                            <constraint firstItem="b8Z-mN-3mb" firstAttribute="leading" secondItem="bNE-zc-dfV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="I7H-zC-Odx"/>
+                            <constraint firstItem="5WJ-MV-bd2" firstAttribute="top" secondItem="bNE-zc-dfV" secondAttribute="top" type="default" id="PxM-MP-zzb"/>
+                            <constraint firstItem="5WJ-MV-bd2" firstAttribute="bottom" secondItem="bNE-zc-dfV" secondAttribute="bottom" type="default" id="Qnt-GG-y5W"/>
+                            <constraint firstAttribute="trailing" secondItem="b8Z-mN-3mb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aYb-7c-vSC"/>
+                            <constraint firstItem="5WJ-MV-bd2" firstAttribute="leading" secondItem="bNE-zc-dfV" secondAttribute="leading" type="default" id="ajE-sg-FQE"/>
+                            <constraint firstItem="5WJ-MV-bd2" firstAttribute="trailing" secondItem="bNE-zc-dfV" secondAttribute="trailing" type="default" id="gOZ-N0-guV"/>
+                            <constraint firstItem="5WJ-MV-bd2" firstAttribute="centerX" secondItem="lnI-4z-W8s" secondAttribute="centerX" type="default" id="i7b-Ap-IYL"/>
+                            <constraint firstItem="lnI-4z-W8s" firstAttribute="top" secondItem="bNE-zc-dfV" secondAttribute="top" constant="63" id="iHD-5q-6vp"/>
+                            <constraint firstAttribute="trailing" secondItem="teX-aL-52B" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uN1-0F-3n7"/>
+                            <constraint firstAttribute="bottom" secondItem="teX-aL-52B" secondAttribute="bottom" constant="26" id="y2c-om-v16"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="michell" destination="teX-aL-52B" id="oI3-2f-sAZ"/>
@@ -97,33 +104,11 @@
             <point key="canvasLocation" x="-40" y="561"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="U3O-Oi-RfZ">
-            <objects>
-                <viewController id="l3p-8t-kgN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xxe-hn-ijZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="CaX-ng-Ea1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VG1-R5-ZKj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3ol-a2-1aS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8" y="1055"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="L3d-re-EZA">
             <objects>
                 <viewController id="78H-SU-AhJ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LIW-30-evr"/>
-                        <viewControllerLayoutGuide type="bottom" id="hMW-DZ-Luo"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ucA-sz-tOu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -136,62 +121,72 @@
         <scene sceneID="T6G-3H-es8">
             <objects>
                 <viewController storyboardIdentifier="projectView" id="xNi-wD-FoQ" customClass="ProjectViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BEM-e8-Oq5"/>
-                        <viewControllerLayoutGuide type="bottom" id="mii-s7-Re6"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5LB-dM-tYr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Coming soon!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E17-b7-67u">
-                                <rect key="frame" x="68" y="208" width="194" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Coming soon!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E17-b7-67u">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leaves.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-Q8-g2J">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiN-8q-uqD">
-                                <rect key="frame" x="80" y="179" width="160" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaves.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-Q8-g2J"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiN-8q-uqD">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="E17-b7-67u" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5i9-WG-6m0"/>
+                            <constraint firstItem="RiN-8q-uqD" firstAttribute="top" secondItem="5LB-dM-tYr" secondAttribute="top" constant="141" id="8JX-Uo-khC"/>
+                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="leading" secondItem="5LB-dM-tYr" secondAttribute="leading" constant="-38" id="Ocz-vi-2jD"/>
+                            <constraint firstItem="RiN-8q-uqD" firstAttribute="centerX" secondItem="5LB-dM-tYr" secondAttribute="centerX" type="default" id="aNp-XE-b4g"/>
+                            <constraint firstItem="Edh-Q8-g2J" firstAttribute="top" secondItem="5LB-dM-tYr" secondAttribute="top" constant="-16" id="pSO-yH-1D9"/>
+                            <constraint firstItem="E17-b7-67u" firstAttribute="top" secondItem="5LB-dM-tYr" secondAttribute="top" constant="-42" id="t2Z-Zf-KHp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIx-9g-xoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="1041"/>
+            <point key="canvasLocation" x="734" y="1017"/>
         </scene>
         <!--Project List View Controller-->
         <scene sceneID="bOj-s1-A1y">
             <objects>
                 <viewController storyboardIdentifier="ProjectListView" wantsFullScreenLayout="YES" id="nEH-XS-WyQ" customClass="ProjectListViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FrV-qA-310"/>
-                        <viewControllerLayoutGuide type="bottom" id="FRv-g3-GCv"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mpS-N8-LkN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QvK-N6-EOR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QvK-N6-EOR">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="Bdt-A7-nYt"/>
+                                    <constraint firstAttribute="height" constant="53" id="TvL-6v-eur"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="nEH-XS-WyQ" id="VDr-6d-2Yb"/>
                                     <outlet property="delegate" destination="nEH-XS-WyQ" id="EnF-Yu-CSY"/>
                                 </connections>
                             </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tTe-19-BQz">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nEH-XS-WyQ" id="gRl-rW-Wvk"/>
+                                    <outlet property="delegate" destination="nEH-XS-WyQ" id="Umc-62-chL"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tTe-19-BQz" firstAttribute="top" secondItem="mpS-N8-LkN" secondAttribute="top" type="default" id="1iu-mU-d9u"/>
+                            <constraint firstItem="tTe-19-BQz" firstAttribute="leading" secondItem="mpS-N8-LkN" secondAttribute="leading" type="default" id="WCK-QR-uQm"/>
+                            <constraint firstItem="QvK-N6-EOR" firstAttribute="leading" secondItem="mpS-N8-LkN" secondAttribute="leading" constant="-50" id="b2p-Ov-ti3"/>
+                            <constraint firstItem="tTe-19-BQz" firstAttribute="bottom" secondItem="mpS-N8-LkN" secondAttribute="bottom" type="default" id="gm7-Fl-Mfh"/>
+                            <constraint firstItem="QvK-N6-EOR" firstAttribute="top" secondItem="mpS-N8-LkN" secondAttribute="top" constant="-27" id="mBD-7d-sKB"/>
+                            <constraint firstItem="tTe-19-BQz" firstAttribute="trailing" secondItem="mpS-N8-LkN" secondAttribute="trailing" type="default" id="mlo-b0-4UD"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -227,60 +222,64 @@
         <scene sceneID="ZPF-Db-Frd">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="NNC-9R-yCR" customClass="PWParentViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HwT-OZ-wMV"/>
-                        <viewControllerLayoutGuide type="bottom" id="d8X-sM-nPU"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qNo-Cr-izw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tio-ty-cHD">
-                                <rect key="frame" x="-47" y="119" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tio-ty-cHD">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tio-ty-cHD" firstAttribute="top" secondItem="qNo-Cr-izw" secondAttribute="top" constant="13" id="YTh-12-UgM"/>
+                            <constraint firstItem="Tio-ty-cHD" firstAttribute="leading" secondItem="qNo-Cr-izw" secondAttribute="leading" type="default" id="boP-gf-3hb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="2tR-N9-gJf"/>
                     <navigationItem key="navigationItem" id="etP-kI-8zM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9e-l5-rGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="468" y="-107"/>
+            <point key="canvasLocation" x="486" y="-107"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OAw-2Q-Q2V">
             <objects>
                 <viewController storyboardIdentifier="HUDVC" wantsFullScreenLayout="YES" id="Mwo-zU-wGw" customClass="HUDViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QNT-e2-yNW"/>
-                        <viewControllerLayoutGuide type="bottom" id="6cZ-aZ-7cv"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4P8-sc-QgP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-9M-cnE">
-                                <rect key="frame" x="0.0" y="40" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-9M-cnE">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-Yj-rQa">
-                                        <rect key="frame" x="0.0" y="323" width="320" height="207"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-Yj-rQa">
                                         <color key="backgroundColor" red="0.72258097470000004" green="1" blue="0.99382850359999997" alpha="0.56999999999999995" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="Yej-1Y-slL"/>
+                                            <constraint firstAttribute="width" id="wZO-5O-hXo"/>
+                                        </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Eb0-Yj-rQa" firstAttribute="top" secondItem="FMY-9M-cnE" secondAttribute="top" constant="-27" id="9Kc-F5-1zf"/>
+                                    <constraint firstItem="Eb0-Yj-rQa" firstAttribute="leading" secondItem="FMY-9M-cnE" secondAttribute="leading" constant="25" id="dYy-OZ-XUx"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FMY-9M-cnE" secondAttribute="bottom" constant="494" id="9hJ-8S-qe8"/>
+                            <constraint firstItem="FMY-9M-cnE" firstAttribute="leading" secondItem="4P8-sc-QgP" secondAttribute="leading" constant="-20" id="POv-5Y-mAu"/>
+                            <constraint firstAttribute="trailing" secondItem="FMY-9M-cnE" secondAttribute="trailing" constant="304" id="fma-ya-5XS"/>
+                            <constraint firstItem="FMY-9M-cnE" firstAttribute="top" secondItem="4P8-sc-QgP" secondAttribute="top" constant="7" id="wQY-9W-yRf"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="details" destination="Eb0-Yj-rQa" id="Q7D-mg-bXt"/>
@@ -294,8 +293,54 @@
     <resources>
         <image name="image001alpha.png" width="205" height="43"/>
         <image name="leaves.jpg" width="1600" height="1200"/>
-        <image name="one-linelogolarge_blackblue.png" width="451" height="31.441049575805664"/>
+        <image name="one-linelogolarge_blackblue.png" width="1879" height="131"/>
     </resources>
+    <classes>
+        <class className="ARParentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ARParentViewController.h"/>
+        </class>
+        <class className="AboutUsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutUsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="michell" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="perkins" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="HUDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HUDViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clickInfoButton:"/>
+                <relationship kind="outlet" name="details" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="detailsView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="overlayView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="MainMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="TTabBarController" candidateClass="UITabBarController"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PWNavController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PWNavController.h"/>
+        </class>
+        <class className="PWParentViewController" superclassName="ARParentViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PWParentViewController.h"/>
+        </class>
+        <class className="ProjectListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProjectListViewController.h"/>
+        </class>
+        <class className="ProjectViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProjectViewController.h"/>
+        </class>
+        <class className="TutorialViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TutorialViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -92,9 +92,7 @@
     
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    BOOL lessThanios7 = kCFCoreFoundationVersionNumber <=  kCFCoreFoundationVersionNumber_iOS_6_1;
-    if(lessThanios7) tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);
-
+     tableView.contentInset = UIEdgeInsetsMake([self navigationController].navigationBar.frame.size.height, 0, 0,0);   
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     return 1;
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.1" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4xf-BE-mx6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4xf-BE-mx6">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Tutorial Tab Bar Controller-->
@@ -30,20 +31,19 @@
         <scene sceneID="Qm5-r2-f6T">
             <objects>
                 <viewController storyboardIdentifier="TFirstView" id="sdf-hw-p4X" customClass="TFirstViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DrB-UV-pv2"/>
-                        <viewControllerLayoutGuide type="bottom" id="eqm-rT-07l"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xdI-fi-AJB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_design_tutorial1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sfE-Zk-TfU">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_design_tutorial1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sfE-Zk-TfU"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sfE-Zk-TfU" firstAttribute="top" secondItem="xdI-fi-AJB" secondAttribute="top" type="default" id="18L-GB-Ewh"/>
+                            <constraint firstItem="sfE-Zk-TfU" firstAttribute="leading" secondItem="xdI-fi-AJB" secondAttribute="leading" type="default" id="5j7-iF-QSh"/>
+                            <constraint firstItem="sfE-Zk-TfU" firstAttribute="bottom" secondItem="xdI-fi-AJB" secondAttribute="bottom" type="default" id="HlJ-Pb-UqB"/>
+                            <constraint firstItem="sfE-Zk-TfU" firstAttribute="trailing" secondItem="xdI-fi-AJB" secondAttribute="trailing" type="default" id="fAn-jm-scO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Step 1" image="first" id="glY-J2-i1Z"/>
                     <navigationItem key="navigationItem" id="Ggs-I8-4gh"/>
@@ -56,20 +56,19 @@
         <scene sceneID="npP-IJ-KKC">
             <objects>
                 <viewController storyboardIdentifier="TThirdView" id="JqV-bD-7rH" customClass="TThirdViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7la-9V-8Wn"/>
-                        <viewControllerLayoutGuide type="bottom" id="uB8-kQ-Mno"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WH6-gs-w04">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_design_tutorial3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c5q-1m-yOa">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_design_tutorial3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c5q-1m-yOa"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c5q-1m-yOa" firstAttribute="bottom" secondItem="WH6-gs-w04" secondAttribute="bottom" type="default" id="DLv-eY-guB"/>
+                            <constraint firstItem="c5q-1m-yOa" firstAttribute="leading" secondItem="WH6-gs-w04" secondAttribute="leading" type="default" id="JSs-Ql-Yvx"/>
+                            <constraint firstItem="c5q-1m-yOa" firstAttribute="trailing" secondItem="WH6-gs-w04" secondAttribute="trailing" type="default" id="U1s-So-x2w"/>
+                            <constraint firstItem="c5q-1m-yOa" firstAttribute="top" secondItem="WH6-gs-w04" secondAttribute="top" type="default" id="xF5-5u-ErR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Step 3" image="first" id="5pG-0i-09H"/>
                     <navigationItem key="navigationItem" id="Pqa-hE-z8p"/>
@@ -82,20 +81,19 @@
         <scene sceneID="4SE-aJ-LVW">
             <objects>
                 <viewController storyboardIdentifier="TFourthView" id="QCs-FD-sNQ" customClass="TFourthViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Paa-bI-spC"/>
-                        <viewControllerLayoutGuide type="bottom" id="RcT-3R-jqp"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wco-Qh-mV5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_design_tutorial4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZKc-jW-K7l">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_design_tutorial4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZKc-jW-K7l"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZKc-jW-K7l" firstAttribute="trailing" secondItem="Wco-Qh-mV5" secondAttribute="trailing" type="default" id="Fb8-ze-1g6"/>
+                            <constraint firstItem="ZKc-jW-K7l" firstAttribute="leading" secondItem="Wco-Qh-mV5" secondAttribute="leading" type="default" id="HDe-Ty-ia9"/>
+                            <constraint firstItem="ZKc-jW-K7l" firstAttribute="top" secondItem="Wco-Qh-mV5" secondAttribute="top" type="default" id="kqd-hL-xZx"/>
+                            <constraint firstItem="ZKc-jW-K7l" firstAttribute="bottom" secondItem="Wco-Qh-mV5" secondAttribute="bottom" type="default" id="lY4-Gg-6rl"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Step 4" image="first" id="n5p-uN-sJB"/>
                     <navigationItem key="navigationItem" id="VO8-qp-FpK"/>
@@ -108,20 +106,19 @@
         <scene sceneID="CDJ-s1-bRs">
             <objects>
                 <viewController storyboardIdentifier="TSecondView" id="HGZ-Wh-EHl" customClass="TSecondViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rRL-V8-wkh"/>
-                        <viewControllerLayoutGuide type="bottom" id="lxF-Sy-EJd"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EsL-vp-pUv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_design_tutorial2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-2m-5OA">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_design_tutorial2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-2m-5OA"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zUY-2m-5OA" firstAttribute="bottom" secondItem="EsL-vp-pUv" secondAttribute="bottom" type="default" id="Lya-FS-EFI"/>
+                            <constraint firstItem="zUY-2m-5OA" firstAttribute="leading" secondItem="EsL-vp-pUv" secondAttribute="leading" type="default" id="a1I-Hz-EwT"/>
+                            <constraint firstItem="zUY-2m-5OA" firstAttribute="top" secondItem="EsL-vp-pUv" secondAttribute="top" type="default" id="a7G-hz-I0O"/>
+                            <constraint firstItem="zUY-2m-5OA" firstAttribute="trailing" secondItem="EsL-vp-pUv" secondAttribute="trailing" type="default" id="yLR-ig-2NT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Step 2" image="first" id="y90-Ue-Tdp"/>
                     <navigationItem key="navigationItem" id="njM-yx-8wl"/>
@@ -138,6 +135,26 @@
         <image name="app_design_tutorial4.jpg" width="640" height="960"/>
         <image name="first" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFirstViewController.h"/>
+        </class>
+        <class className="TFourthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFourthViewController.h"/>
+        </class>
+        <class className="TSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TSecondViewController.h"/>
+        </class>
+        <class className="TThirdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TThirdViewController.h"/>
+        </class>
+        <class className="TutorialTabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TutorialTabBarController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

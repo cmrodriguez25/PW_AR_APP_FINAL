@@ -14,11 +14,11 @@
 		1218964E17D6827E00B6CB05 /* isisvideo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1218964D17D681E400B6CB05 /* isisvideo.m4v */; };
 		1218965017D690E800B6CB05 /* buildings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1218964F17D690E800B6CB05 /* buildings.png */; };
 		1218965617D6A30600B6CB05 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218965517D6A30600B6CB05 /* MapsViewController.m */; };
+		122D85F617DA76B3003A3344 /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122D85F517DA76B3003A3344 /* libQCAR.a */; };
 		12369D6C17B2828D00DCC1DD /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D302B17AC175F00AC67CB /* ProjectDetail.storyboard */; };
 		12369D7117B2997B00DCC1DD /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7017B2997B00DCC1DD /* Gear.png */; };
 		12369D7717B3D24E00DCC1DD /* Projects in Resources */ = {isa = PBXBuildFile; fileRef = 12369D7617B3D24E00DCC1DD /* Projects */; };
 		123BEEB517ADAD8B007393CA /* ProjectDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123BEEB417ADAD8B007393CA /* ProjectDetailTabBarViewController.m */; };
-		1281CC1517D12487003C268A /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CA2AC017AAFF1E0056936D /* libQCAR.a */; };
 		1281CC1717D36B77003C268A /* appIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 1281CC1617D36B77003C268A /* appIco.png */; };
 		1281CC1917D36E8D003C268A /* leaves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1281CC1817D36E8D003C268A /* leaves.jpg */; };
 		128A9D6C17A8084F00B1298B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A9D6B17A8084F00B1298B /* Foundation.framework */; };
@@ -111,6 +111,7 @@
 		1218964F17D690E800B6CB05 /* buildings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buildings.png; path = Assets/buildings.png; sourceTree = "<group>"; };
 		1218965417D6A30500B6CB05 /* MapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapsViewController.h; path = ../MapsViewController.h; sourceTree = "<group>"; };
 		1218965517D6A30600B6CB05 /* MapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapsViewController.m; path = ../MapsViewController.m; sourceTree = "<group>"; };
+		122D85F517DA76B3003A3344 /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = ../../libQCAR.a; sourceTree = "<group>"; };
 		12369D6717B27DB100DCC1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VuforiaTesting/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12369D7017B2997B00DCC1DD /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
 		12369D7617B3D24E00DCC1DD /* Projects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Projects; path = Assets/Projects; sourceTree = "<group>"; };
@@ -200,7 +201,6 @@
 		130D896317ABE2D2005F9F63 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		130D896417ABE2D2005F9F63 /* WordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordList.h; sourceTree = "<group>"; };
 		130D896517ABE2D2005F9F63 /* WordResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordResult.h; sourceTree = "<group>"; };
-		130D896617ABE2D2005F9F63 /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libQCAR.a; sourceTree = "<group>"; };
 		130D896817ABE2D2005F9F63 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		130D896917ABE2D2005F9F63 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		130D896A17ABE2D2005F9F63 /* ARTargetFoundDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTargetFoundDelegate.h; sourceTree = "<group>"; };
@@ -272,8 +272,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122D85F617DA76B3003A3344 /* libQCAR.a in Frameworks */,
 				1218964917D673E000B6CB05 /* MediaPlayer.framework in Frameworks */,
-				1281CC1517D12487003C268A /* libQCAR.a in Frameworks */,
 				128A9DD817A85D2D00B1298B /* SystemConfiguration.framework in Frameworks */,
 				128A9D6E17A8084F00B1298B /* CoreGraphics.framework in Frameworks */,
 				128A9DD617A85D1300B1298B /* CoreMotion.framework in Frameworks */,
@@ -304,6 +304,7 @@
 		128A9D5F17A8084F00B1298B = {
 			isa = PBXGroup;
 			children = (
+				122D85F517DA76B3003A3344 /* libQCAR.a */,
 				13310D1217D6A41300CD8096 /* ProjectViewController.h */,
 				13310D1317D6A41300CD8096 /* ProjectViewController.m */,
 				13F6F49017D6849C005FBE88 /* image001.png */,
@@ -395,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				130D893817ABE2D2005F9F63 /* include */,
-				130D896617ABE2D2005F9F63 /* libQCAR.a */,
 				130D896717ABE2D2005F9F63 /* VuforiaTesting */,
 			);
 			name = VuforiaTesting;
@@ -612,6 +612,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Michell;
 				TargetAttributes = {
+					128A9D6717A8084F00B1298B = {
+						DevelopmentTeam = DLH6L6DR9B;
+					};
 					128A9D8B17A8085000B1298B = {
 						TestTargetID = 128A9D6717A8084F00B1298B;
 					};
@@ -845,17 +848,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Isis Fumero (DLH6L6DR9B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Isis Fumero (DLH6L6DR9B)";
+				COMPRESS_PNG_FILES = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VuforiaTesting/VuforiaTesting-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = include;
 				INFOPLIST_FILE = "VuforiaTesting/VuforiaTesting-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
-					"/Users/cynthiabesada/Documents/Perkins+Will/PW_AR_APP_FINAL/PW_AR_APP_FINAL",
+					/Users/michell/Desktop,
 					/Users/michell/Desktop/PW_AR_APP_FINAL,
+					"\"$(SRCROOT)/../../VuforiaTesting\"",
+					"\"$(SRCROOT)/../..\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "583D780C-3DE2-4610-8B66-7C9ECA859449";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "583D780C-3DE2-4610-8B66-7C9ECA859449";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -865,16 +876,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Isis Fumero (DLH6L6DR9B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Isis Fumero (DLH6L6DR9B)";
+				COMPRESS_PNG_FILES = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VuforiaTesting/VuforiaTesting-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = include;
 				INFOPLIST_FILE = "VuforiaTesting/VuforiaTesting-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
-					"/Users/cynthiabesada/Documents/Perkins+Will/PW_AR_APP_FINAL/PW_AR_APP_FINAL",
+					/Users/michell/Desktop,
 					/Users/michell/Desktop/PW_AR_APP_FINAL,
+					"\"$(SRCROOT)/../../VuforiaTesting\"",
+					"\"$(SRCROOT)/../..\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "583D780C-3DE2-4610-8B66-7C9ECA859449";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "583D780C-3DE2-4610-8B66-7C9ECA859449";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
