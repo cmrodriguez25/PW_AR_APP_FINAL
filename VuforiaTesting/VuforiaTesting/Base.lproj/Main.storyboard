@@ -300,56 +300,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo.png" width="370" height="118"/>
+        <image name="Logo.png" width="16" height="16"/>
         <image name="leaves.jpg" width="1600" height="1200"/>
         <image name="one-linelogolarge_blackblue.png" width="1879" height="131"/>
     </resources>
-    <classes>
-        <class className="ARParentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ARParentViewController.h"/>
-        </class>
-        <class className="AboutUsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutUsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="michell" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="perkins" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="HUDViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HUDViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="clickInfoButton:"/>
-                <relationship kind="outlet" name="details" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="detailsView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="overlayView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="MainMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="TTabBarController" candidateClass="UITabBarController"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PWNavController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PWNavController.h"/>
-        </class>
-        <class className="PWParentViewController" superclassName="ARParentViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PWParentViewController.h"/>
-        </class>
-        <class className="ProjectListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProjectListViewController.h"/>
-        </class>
-        <class className="ProjectViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProjectViewController.h"/>
-        </class>
-        <class className="TutorialViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TutorialViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
